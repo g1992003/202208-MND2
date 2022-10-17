@@ -1,0 +1,54 @@
+.hamMenu{
+    overflow: hidden;
+}
+.menu-ham,
+.menu-ham span {
+    display: inline-block;
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+
+.menu-ham {
+    position: relative;
+    background: none;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    width: 23px;
+    height: 23px;
+    margin-left: 18px;
+}
+
+.menu-ham span {
+    position: absolute;
+    width: 23px;
+    height: 2px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu-ham span:nth-of-type(1) {
+    top: 4px;
+    transition: transform 0.5s;
+}
+
+.menu-ham span:nth-of-type(2) {
+    top: 12px;
+    transition: transform 0.5s;
+}
+.menu-ham span:nth-of-type(3) {
+    bottom: 1px;
+    transition: transform 0.5s;
+}
+
+#menu-ham.hamActive span:nth-of-type(1) {
+    transform: translateY(8px) rotate(-45deg);
+}
+#menu-ham.hamActive span:nth-of-type(2) {
+    transform: translateX(100px);
+}
+#menu-ham.hamActive span:nth-of-type(3) {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+

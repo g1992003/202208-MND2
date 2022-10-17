@@ -1,0 +1,58 @@
+footer{
+    background: #0a1e3f;
+}
+.footer{
+    width: 1168px;
+    max-width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 53px 0 76px;
+    >li{
+        span{
+            position: relative;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.66;
+            letter-spacing: 1px;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+            }
+        }
+        > ul{
+            margin-top: 1.1em;
+            > li{
+                font-size: 16px;
+                line-height: 1.7;
+                font-weight: 300;
+                margin-bottom: 0.37em;
+                a{
+                    display: inline-block;
+                    border: 1px solid transparent;
+                    transition: all 0.75s;
+                    &:hover {
+                        display: inline-block;
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.logIn{
+    .footer{
+        >li{
+            &:nth-child(4){
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,2865 @@
+/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
+@import "utils";
+@import "plugIn/swiper-bundle.min";
+
+$color_type_0: rgb(102, 102, 102);
+$color_type_1: rgb(113, 113, 113);
+$color_type_2: rgb(128, 128, 128);
+$color_type_3: rgb(178, 178, 178);
+$color_type_4: rgb(240, 241, 241);
+$color_type_5: rgb(255, 255, 255);
+$color_type_6: rgb(55, 56, 56);
+$color_type_7: rgb(89, 87, 87);
+
+$font_type_0: 700 47.893001556396484px/1.2 "Noto Sans TC", Helvetica, Arial, serif;
+$font_type_1: 47.82899856567383px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_2: 37.61899948120117px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_3: 33.715999603271484px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_4: 33.680999755859375px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_5: 30px/1.66 "Inter", Helvetica, Arial, serif;
+$font_type_6: 29.500999450683594px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_7: 29.47100067138672px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_8: 27.33099937438965px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_9: 26.663999557495117px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_10: 26.01099967956543px/1.2 "Noto Sans TC", Helvetica, Arial, serif;
+$font_type_11: 25.54199981689453px/1.2 "Noto Sans TC", Helvetica, Arial, serif;
+$font_type_12: 23.915000915527344px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_13: 22.951000213623047px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_14: 22.927000045776367px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_15: 21.97599983215332px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type_16: 500 15.692999839782715px/1.2 "Noto Sans TC", Helvetica, Arial, serif;
+
+.index {
+  &-main {
+    @include flex-column;
+    background-color: $color_type_5;
+  }
+  &-main.layout {
+    position: relative;
+    overflow: hidden;
+    min-width: 0px;
+    max-width: 1920px;
+  }
+  &-banner {
+    @include flex-column;
+  }
+  &-banner.layout {
+    position: relative;
+  }
+  &-group {
+    @include flex-column;
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-group.layout {
+    position: absolute;
+    top: -1781px;
+    height: 3004px;
+    left: -2089px;
+    width: 4014px;
+  }
+  &-group1 {
+    @include flex-column;
+  }
+  &-group1.layout {
+    position: absolute;
+    top: 1712px;
+    height: 881px;
+    width: 1920px;
+    right: 5px;
+  }
+  &-background {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-background.layout {
+    position: absolute;
+    top: 0px;
+    height: 881px;
+    width: 1920px;
+    right: 0px;
+  }
+  &-block4 {
+    @include flex-column;
+  }
+  &-block4.layout {
+    position: fixed;
+    z-index: 10;
+    top: 246px;
+    height: 129px;
+    width: 114px;
+    right: -5px;
+  }
+  &-group2 {
+    @include flex-column;
+  }
+  &-group2.layout {
+    position: relative;
+    height: 96px;
+    margin: 19px 9px 14px 13px;
+    @include lg {
+      margin: 19px 8px 14px 11px;
+    }
+    @include md {
+      margin: 19px 7px 14px 10px;
+    }
+    @include sm {
+      margin: 19px 6px 14px 8px;
+    }
+    @include xs {
+      margin: 19px 5px 14px 7px;
+    }
+    @include tn {
+      margin: 19px 5px 14px 6px;
+    }
+  }
+  &-block41 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-block41.layout {
+    position: absolute;
+    top: -19px;
+    height: 129px;
+    width: 114px;
+    left: -100vw;
+    right: -100vw;
+    margin: 0px auto;
+  }
+  &-medium-title6 {
+    @include font-face($font_type_10, $color_type_5, 0px);
+    @include lg {
+      font-size: 24px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 21px;
+    }
+    @include sm {
+      font-size: 19px;
+    }
+    @include xs {
+      font-size: 18px;
+    }
+    @include xxs {
+      font-size: 17px;
+    }
+  }
+  &-medium-title6.layout {
+    position: absolute;
+    top: 64px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  &-icon1 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-icon1.layout {
+    position: absolute;
+    top: 0px;
+    height: 61px;
+    left: 0px;
+    width: 62px;
+    min-width: 62px;
+    margin: 0px 20px 35px 10px;
+    @include lg {
+      margin: 0px 18px 35px 9px;
+    }
+    @include md {
+      margin: 0px 15px 35px 7px;
+    }
+    @include sm {
+      margin: 0px 13px 35px 6px;
+    }
+    @include xs {
+      margin: 0px 11px 35px 6px;
+    }
+    @include xxs {
+      margin: 0px 10px 35px 5px;
+    }
+  }
+  &-flex {
+    @include flex-column;
+  }
+  &-flex.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 42px 53px 95px;
+  }
+  &-group3 {
+    @include flex-column;
+  }
+  &-group3.layout {
+    position: relative;
+    // height: 254px;
+    width: 18.06%;
+    // margin: 0px 81.94% 0px 0%;
+  }
+  &-title {
+    @include font-face($font_type_11, $color_type_5, 0px);
+    @include lg {
+      font-size: 23px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 21px;
+    }
+    @include sm {
+      font-size: 19px;
+    }
+    @include xs {
+      font-size: 18px;
+    }
+    @include xxs {
+      font-size: 17px;
+    }
+  }
+  &-title.layout {
+    text-align: center;
+    margin-top: 15px;
+    // position: absolute;
+    // top: 186px;
+    // bottom: 37px;
+    // left: 0px;
+    // width: 262px;
+    // min-width: 262px;
+    // margin: 0px 0px 0px 3px;
+    // @include lg {
+    //   margin: 0px 0px 0px 5px;
+    // }
+  }
+  &-title-en-box {
+    @include h-center-content;
+    @include lg {
+      align-items: flex-start;
+      justify-content: center;
+    }
+    @include md {
+      align-items: flex-start;
+      justify-content: center;
+    }
+    @include sm {
+      align-items: flex-start;
+      justify-content: center;
+    }
+    @include xxs {
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+  &-title-en-box.layout {
+    text-align: center;
+    margin-top: 5px;
+    // position: absolute;
+    // top: 216px;
+    // bottom: 0px;
+    // left: 0px;
+    // width: 262px;
+    // min-width: 262px;
+    // margin: 0px 3px 0px 0px;
+    // @include lg {
+    //   margin: 0px 5px 0px 0px;
+    // }
+  }
+  &-title-en {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    font: $font_type_16;
+    color: $color_type_5;
+    text-align: center;
+    letter-spacing: 0px;
+    white-space: pre-wrap;
+    @include lg {
+      font-size: 15px;
+      text-align: center;
+    }
+    @include md {
+      font-size: 14px;
+    }
+    @include sm {
+      font-size: 13px;
+    }
+    @include xxs {
+      font-size: 12px;
+    }
+  }
+  &-logo {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-logo.layout {
+    // position: absolute;
+    // top: 0px;
+    // left: 0px;
+    // right: 0px;
+    width: 137px;
+    min-width: 137px;
+    height: 175px;
+    margin: 0px auto;
+  }
+  &-banner-title {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-banner-title.layout {
+    position: relative;
+    height: 66px;
+    width: 1123px;
+    min-width: 1123px;
+    margin: 279px auto 0px;
+  }
+  &-banner-title-en {
+    @include h-center-content;
+    font: $font_type_0;
+    color: $color_type_5;
+    text-align: center;
+    letter-spacing: 0px;
+    @include lg {
+      font-size: 43px;
+      text-align: center;
+    }
+    @include md {
+      font-size: 37px;
+    }
+    @include sm {
+      font-size: 32px;
+    }
+    @include xs {
+      font-size: 29px;
+    }
+    @include xxs {
+      font-size: 27px;
+    }
+    @include tn {
+      font-size: 25px;
+    }
+  }
+  &-banner-title-en.layout {
+    position: relative;
+    width: 1453px;
+    min-width: 1453px;
+    margin: 9px auto 0px;
+  }
+  &-section2__section2 {
+    @include flex-column;
+    background-color: $color_type_3;
+  }
+  &-section2__section2.layout {
+    position: relative;
+  }
+  &-section2__flex {
+    display: flex;
+  }
+  &-section2__flex.layout {
+    position: relative;
+    flex-grow: 1;
+    width: 9.9%;
+    margin: 16px 1.98% 16px 88.13%;
+  }
+  &-section2__medium-title2-box {
+    @include lg {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include md {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include sm {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include xs {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include xxs {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include tn {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+  &-section2__medium-title2-box.layout {
+    position: relative;
+    flex: 0 0 auto;
+  }
+  &-section2__medium-title2 {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    @include font-face($font_type_8, $color_type_4, 0px);
+    white-space: pre-wrap;
+    @include lg {
+      font-size: 25px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 22px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+    @include xs {
+      font-size: 19px;
+    }
+    @include xxs {
+      font-size: 18px;
+    }
+    @include tn {
+      font-size: 17px;
+    }
+  }
+  &-section2__flex-spacer {
+    flex: 0 1 20px;
+  }
+  &-section2__flex-item {
+    @include flex-column;
+    position: relative;
+    flex: 0 1 46px;
+  }
+  &-section2__image3 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section2__image3.layout {
+    position: relative;
+    height: 24px;
+    width: 46px;
+    min-width: 46px;
+    margin: 5px 0px 4px;
+  }
+  &-section3__section3 {
+    transition: all 0.75s;
+    @include flex-column;
+    // &.nav-close{
+    //     height: 0;
+    //     transform: translateY(-682px);
+    // }
+  }
+  &-section3__section3.layout {
+    position: relative;
+    // height: 682px;
+  }
+  &-section3__section31 {
+    background-color: $color_type_3;
+  }
+  &-section3__section31.layout {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  &-section3__box8 {
+    background-color: $color_type_4;
+  }
+  &-section3__box8.layout {
+    position: absolute;
+    top: 5px;
+    bottom: 0px;
+    left: 386px;
+    width: 383px;
+  }
+  &-section3__group {
+    @include flex-column;
+  }
+  &-section3__group.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 44px 118px 40px 125px;
+  }
+  &-section3__box8.layout1 {
+    position: absolute;
+    top: -39px;
+    bottom: -40px;
+    left: 1026px;
+    width: 383px;
+  }
+  &-section3__flex {
+    display: flex;
+    @include sm {
+      flex-wrap: wrap;
+      align-content: flex-start;
+      row-gap: 16px;
+    }
+  }
+  &-section3__flex.layout {
+    position: relative;
+    flex-grow: 1;
+  }
+  &-section3__flex-item {
+    @include flex-column;
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 144px;
+    @include sm {
+      flex: 0 0 100%;
+      min-width: unset;
+    }
+  }
+  &-section3__flex1 {
+    @include flex-column;
+  }
+  &-section3__flex1.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px 0px 343px;
+  }
+  &-section3__flex2 {
+    @include flex-column;
+  }
+  &-section3__flex2.layout {
+    position: relative;
+  }
+  &-section3__big-title1 {
+    @include font-face($font_type_4, $color_type_4, 0px);
+    @include lg {
+      font-size: 30px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 27px;
+    }
+    @include sm {
+      font-size: 24px;
+    }
+    @include xs {
+      font-size: 22px;
+    }
+    @include xxs {
+      font-size: 21px;
+    }
+    @include tn {
+      font-size: 20px;
+    }
+  }
+  &-section3__big-title1.layout {
+    position: relative;
+  }
+  &-section3__line4 {
+    background: var(--src) center center / cover no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  &-section3__medium-title2 {
+    @include font-face($font_type_8, $color_type_4, 0px);
+    @include lg {
+      font-size: 25px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 22px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+    @include xs {
+      font-size: 19px;
+    }
+    @include xxs {
+      font-size: 18px;
+    }
+    @include tn {
+      font-size: 17px;
+    }
+  }
+  &-section3__medium-title2.layout {
+    position: relative;
+    margin: 23px 27px 0px 0px;
+    @include lg {
+      margin: 23px 24px 0px 0px;
+    }
+    @include md {
+      margin: 23px 20px 0px 0px;
+    }
+    @include sm {
+      margin: 23px 17px 0px 0px;
+    }
+    @include xs {
+      margin: 23px 15px 0px 0px;
+    }
+    @include xxs {
+      margin: 23px 14px 0px 0px;
+    }
+    @include tn {
+      margin: 23px 13px 0px 0px;
+    }
+  }
+  &-section3__medium-title2.layout1 {
+    position: relative;
+    margin: 16px 26px 0px 1px;
+    @include lg {
+      margin: 16px 23px 0px 5px;
+    }
+    @include md {
+      margin: 16px 19px 0px 5px;
+    }
+    @include sm {
+      margin: 16px 16px 0px 5px;
+    }
+    @include xs {
+      margin: 16px 15px 0px 5px;
+    }
+    @include xxs {
+      margin: 16px 13px 0px 5px;
+    }
+    @include tn {
+      margin: 16px 12px 0px 5px;
+    }
+  }
+  &-section3__medium-title2.layout2 {
+    position: relative;
+    margin: 16px 26px 0px 1px;
+    @include lg {
+      margin: 16px 23px 0px 5px;
+    }
+    @include md {
+      margin: 16px 19px 0px 5px;
+    }
+    @include sm {
+      margin: 16px 16px 0px 5px;
+    }
+    @include xs {
+      margin: 16px 15px 0px 5px;
+    }
+    @include xxs {
+      margin: 16px 13px 0px 5px;
+    }
+    @include tn {
+      margin: 16px 12px 0px 5px;
+    }
+  }
+  &-section3__medium-title2.layout3 {
+    position: relative;
+    margin: 16px 26px 0px 1px;
+    @include lg {
+      margin: 16px 23px 0px 5px;
+    }
+    @include md {
+      margin: 16px 19px 0px 5px;
+    }
+    @include sm {
+      margin: 16px 16px 0px 5px;
+    }
+    @include xs {
+      margin: 16px 15px 0px 5px;
+    }
+    @include xxs {
+      margin: 16px 13px 0px 5px;
+    }
+    @include tn {
+      margin: 16px 12px 0px 5px;
+    }
+  }
+  &-section3__flex-spacer {
+    flex: 1 1 240px;
+    @include sm {
+      display: none;
+    }
+  }
+  &-section3__flex3 {
+    @include flex-column;
+  }
+  &-section3__flex3.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px 0px 196px;
+  }
+  &-section3__flex4 {
+    @include flex-column;
+  }
+  &-section3__flex4.layout {
+    position: relative;
+  }
+  &-section3__big-title {
+    @include font-face($font_type_4, $color_type_6, 0px);
+    @include lg {
+      font-size: 30px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 27px;
+    }
+    @include sm {
+      font-size: 24px;
+    }
+    @include xs {
+      font-size: 22px;
+    }
+    @include xxs {
+      font-size: 21px;
+    }
+    @include tn {
+      font-size: 20px;
+    }
+  }
+  &-section3__big-title.layout {
+    position: relative;
+  }
+  &-section3__medium-title3 {
+    @include font-face($font_type_8, $color_type_6, 0px);
+    @include lg {
+      font-size: 25px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 22px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+    @include xs {
+      font-size: 19px;
+    }
+    @include xxs {
+      font-size: 18px;
+    }
+    @include tn {
+      font-size: 17px;
+    }
+  }
+  &-section3__medium-title3.layout {
+    position: relative;
+    margin: 23px 0px 0px;
+  }
+  &-section3__medium-title3.layout1 {
+    position: relative;
+    margin: 16px 27px 0px 0px;
+    @include lg {
+      margin: 16px 24px 0px 0px;
+    }
+    @include md {
+      margin: 16px 20px 0px 0px;
+    }
+    @include sm {
+      margin: 16px 17px 0px 0px;
+    }
+    @include xs {
+      margin: 16px 15px 0px 0px;
+    }
+    @include xxs {
+      margin: 16px 14px 0px 0px;
+    }
+    @include tn {
+      margin: 16px 13px 0px 0px;
+    }
+  }
+  &-section3__medium-title3.layout2 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section3__medium-title3.layout3 {
+    position: relative;
+    margin: 16px 27px 0px 0px;
+    @include lg {
+      margin: 16px 24px 0px 0px;
+    }
+    @include md {
+      margin: 16px 20px 0px 0px;
+    }
+    @include sm {
+      margin: 16px 17px 0px 0px;
+    }
+    @include xs {
+      margin: 16px 15px 0px 0px;
+    }
+    @include xxs {
+      margin: 16px 14px 0px 0px;
+    }
+    @include tn {
+      margin: 16px 13px 0px 0px;
+    }
+  }
+  &-section3__medium-title3.layout4 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section3__medium-title3.layout5 {
+    position: relative;
+    margin: 16px 27px 0px 0px;
+    @include lg {
+      margin: 16px 24px 0px 0px;
+    }
+    @include md {
+      margin: 16px 20px 0px 0px;
+    }
+    @include sm {
+      margin: 16px 17px 0px 0px;
+    }
+    @include xs {
+      margin: 16px 15px 0px 0px;
+    }
+    @include xxs {
+      margin: 16px 14px 0px 0px;
+    }
+    @include tn {
+      margin: 16px 13px 0px 0px;
+    }
+  }
+  &-section3__medium-title3.layout6 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section3__flex-spacer1 {
+    flex: 1 1 238px;
+    @include sm {
+      display: none;
+    }
+  }
+  &-section3__flex-item1 {
+    @include flex-column;
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 145px;
+    @include sm {
+      flex: 0 0 100%;
+      min-width: unset;
+    }
+  }
+  &-section3__flex5 {
+    @include flex-column;
+  }
+  &-section3__flex5.layout {
+    position: relative;
+    flex-grow: 1;
+  }
+  &-section3__flex6 {
+    @include flex-column;
+  }
+  &-section3__flex6.layout {
+    position: relative;
+    margin: 0px 1px 0px 0px;
+    @include lg {
+      margin: 0px 5px 0px 0px;
+    }
+  }
+  &-section3__medium-title2.layout4 {
+    position: relative;
+    margin: 23px 1px 0px;
+    @include lg {
+      margin: 23px 5px 0px;
+    }
+  }
+  &-section3__medium-title2.layout5 {
+    position: relative;
+    margin: 16px 0px 0px 1px;
+    @include lg {
+      margin: 16px 0px 0px 5px;
+    }
+  }
+  &-section3__medium-title2.layout6 {
+    position: relative;
+    margin: 16px 1px 0px;
+    @include lg {
+      margin: 16px 5px 0px;
+    }
+  }
+  &-section3__medium-title2.layout7 {
+    position: relative;
+    margin: 16px 0px 0px 1px;
+    @include lg {
+      margin: 16px 0px 0px 5px;
+    }
+  }
+  &-section3__medium-title2.layout8 {
+    position: relative;
+    margin: 16px 0px 0px 1px;
+    @include lg {
+      margin: 16px 0px 0px 5px;
+    }
+  }
+  &-section3__medium-title2.layout9 {
+    position: relative;
+    margin: 16px 1px 0px;
+    @include lg {
+      margin: 16px 5px 0px;
+    }
+  }
+  &-section3__medium-title2.layout10 {
+    position: relative;
+    margin: 16px 0px 0px 1px;
+    @include lg {
+      margin: 16px 0px 0px 5px;
+    }
+  }
+  &-section3__medium-title2.layout11 {
+    position: relative;
+    margin: 16px 0px 0px 1px;
+    @include lg {
+      margin: 16px 0px 0px 5px;
+    }
+  }
+  &-section3__medium-title2.layout12 {
+    position: relative;
+    margin: 16px 0px 0px 1px;
+    @include lg {
+      margin: 16px 0px 0px 5px;
+    }
+  }
+  &-section3__medium-title2.layout13 {
+    position: relative;
+    margin: 16px 1px 0px;
+    @include lg {
+      margin: 16px 5px 0px;
+    }
+  }
+  &-section3__medium-title2.layout14 {
+    position: relative;
+    margin: 16px 1px 0px;
+    @include lg {
+      margin: 16px 5px 0px;
+    }
+  }
+  &-section3__flex-spacer2 {
+    flex: 1 1 224px;
+    @include sm {
+      display: none;
+    }
+  }
+  &-section3__flex-item2 {
+    @include flex-column;
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 172px;
+    @include sm {
+      flex: 0 0 100%;
+      min-width: unset;
+    }
+  }
+  &-section3__flex7 {
+    @include flex-column;
+  }
+  &-section3__flex7.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px 0px 343px;
+  }
+  &-section3__flex8 {
+    @include flex-column;
+  }
+  &-section3__flex8.layout {
+    position: relative;
+    margin: 0px 27px 0px 0px;
+    @include lg {
+      margin: 0px 24px 0px 0px;
+    }
+    @include md {
+      margin: 0px 20px 0px 0px;
+    }
+    @include sm {
+      margin: 0px 17px 0px 0px;
+    }
+    @include xs {
+      margin: 0px 15px 0px 0px;
+    }
+    @include xxs {
+      margin: 0px 14px 0px 0px;
+    }
+    @include tn {
+      margin: 0px 13px 0px 0px;
+    }
+  }
+  &-section3__big-title.layout1 {
+    position: relative;
+    margin: 0px 0px 0px 1px;
+    @include lg {
+      margin: 0px 0px 0px 5px;
+    }
+  }
+  &-section3__medium-title3.layout7 {
+    position: relative;
+    margin: 23px 27px 0px 1px;
+    @include lg {
+      margin: 23px 24px 0px 5px;
+    }
+    @include md {
+      margin: 23px 20px 0px 5px;
+    }
+    @include sm {
+      margin: 23px 17px 0px 5px;
+    }
+    @include xs {
+      margin: 23px 15px 0px 5px;
+    }
+    @include xxs {
+      margin: 23px 14px 0px 5px;
+    }
+    @include tn {
+      margin: 23px 13px 0px 5px;
+    }
+  }
+  &-section3__medium-title3.layout8 {
+    position: relative;
+    margin: 16px 0px 0px 1px;
+    @include lg {
+      margin: 16px 0px 0px 5px;
+    }
+  }
+  &-section3__medium-title3.layout9 {
+    position: relative;
+    margin: 16px 0px 0px 1px;
+    @include lg {
+      margin: 16px 0px 0px 5px;
+    }
+  }
+  &-section3__medium-title3.layout10 {
+    position: relative;
+    margin: 16px 0px 0px 1px;
+    @include lg {
+      margin: 16px 0px 0px 5px;
+    }
+  }
+  &-section3__flex-spacer3 {
+    flex: 1 1 226px;
+    @include sm {
+      display: none;
+    }
+  }
+  &-section3__flex9 {
+    @include flex-column;
+  }
+  &-section3__flex9.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px 0px 98px;
+  }
+  &-section3__flex10 {
+    @include flex-column;
+  }
+  &-section3__flex10.layout {
+    position: relative;
+  }
+  &-section3__medium-title2.layout15 {
+    position: relative;
+    margin: 16px 27px 0px 0px;
+    @include lg {
+      margin: 16px 24px 0px 0px;
+    }
+    @include md {
+      margin: 16px 20px 0px 0px;
+    }
+    @include sm {
+      margin: 16px 17px 0px 0px;
+    }
+    @include xs {
+      margin: 16px 15px 0px 0px;
+    }
+    @include xxs {
+      margin: 16px 14px 0px 0px;
+    }
+    @include tn {
+      margin: 16px 13px 0px 0px;
+    }
+  }
+  &-section3__medium-title2.layout16 {
+    position: relative;
+    margin: 16px 27px 0px 0px;
+    @include lg {
+      margin: 16px 24px 0px 0px;
+    }
+    @include md {
+      margin: 16px 20px 0px 0px;
+    }
+    @include sm {
+      margin: 16px 17px 0px 0px;
+    }
+    @include xs {
+      margin: 16px 15px 0px 0px;
+    }
+    @include xxs {
+      margin: 16px 14px 0px 0px;
+    }
+    @include tn {
+      margin: 16px 13px 0px 0px;
+    }
+  }
+  &-section3__medium-title2.layout17 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section3__medium-title2.layout18 {
+    position: relative;
+    margin: 16px 27px 0px 0px;
+    @include lg {
+      margin: 16px 24px 0px 0px;
+    }
+    @include md {
+      margin: 16px 20px 0px 0px;
+    }
+    @include sm {
+      margin: 16px 17px 0px 0px;
+    }
+    @include xs {
+      margin: 16px 15px 0px 0px;
+    }
+    @include xxs {
+      margin: 16px 14px 0px 0px;
+    }
+    @include tn {
+      margin: 16px 13px 0px 0px;
+    }
+  }
+  &-section3__medium-title2.layout19 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section3__medium-title2.layout20 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section3__medium-title2.layout21 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section3__medium-title2.layout22 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section4__section4 {
+    @include flex-column;
+  }
+  &-section4__section4.layout {
+    position: relative;
+    transition: all 0.75s;
+    background: #fff;
+    &.nav-close-1{
+        margin-top: -682px;
+        // transform: translateY(-682px);
+    }
+  }
+  &-section4__flex {
+    display: flex;
+    @include xl {
+      flex-wrap: wrap;
+      align-content: flex-start;
+      row-gap: 16px;
+    }
+  }
+  &-section4__flex.layout {
+    position: relative;
+    flex-grow: 1;
+    width: 85.31%;
+    margin: 91px auto 53px;
+  }
+  &-section4__flex-item {
+    @include flex-column;
+    position: relative;
+    flex: 1 1 519px;
+    @include xl {
+      flex: 0 0 100%;
+    }
+  }
+  &-section4__flex1 {
+    @include flex-column;
+  }
+  &-section4__flex1.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 8px 0px 0px;
+  }
+  &-section4__group {
+    @include flex-column;
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section4__group.layout {
+    position: relative;
+    height: 377px;
+  }
+  &-section4__hero-title1 {
+    @include font-face($font_type_1, $color_type_5, 0px);
+    @include lg {
+      font-size: 43px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 37px;
+    }
+    @include sm {
+      font-size: 32px;
+    }
+    @include xs {
+      font-size: 29px;
+    }
+    @include xxs {
+      font-size: 27px;
+    }
+    @include tn {
+      font-size: 25px;
+    }
+  }
+  &-section4__hero-title1.layout {
+    position: absolute;
+    top: 283px;
+    bottom: 36px;
+    left: 0px;
+    right: 0px;
+    width: 57.61%;
+    margin: 0px 20.04% 0px 22.35%;
+  }
+  &-section4__subtitle {
+    @include font-face($font_type_14, $color_type_1, 0px);
+    @include lg {
+      font-size: 21px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 20px;
+    }
+    @include sm {
+      font-size: 18px;
+    }
+    @include xs {
+      font-size: 17px;
+    }
+    @include tn {
+      font-size: 16px;
+    }
+  }
+  &-section4__subtitle.layout {
+    position: absolute;
+    top: 163px;
+    bottom: 186px;
+    left: 0px;
+    right: 0px;
+    width: 50px;
+    min-width: 50px;
+    margin: 0px auto;
+  }
+  &-section4__group.layout1 {
+    position: relative;
+    height: 377px;
+    margin: 62px 0px 0px;
+  }
+  &-section4__hero-title1.layout1 {
+    position: absolute;
+    top: 294px;
+    bottom: 25px;
+    left: 0px;
+    right: 0px;
+    width: 20.81%;
+    margin: 0px auto;
+  }
+  &-section4__flex-spacer {
+    flex: 0 1 43px;
+    @include xl {
+      display: none;
+    }
+  }
+  &-section4__group.layout2 {
+    position: relative;
+    flex-grow: 1;
+    width: 521px;
+    height: 827px;
+
+  }
+  &-section4__flex2 {
+    @include flex-column;
+  }
+  &-section4__flex2.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 53px 16px 49px 38px;
+    @include lg {
+      margin: 53px 14px 49px 33px;
+    }
+    @include md {
+      margin: 53px 12px 49px 27px;
+    }
+    @include sm {
+      margin: 53px 10px 49px 23px;
+    }
+    @include xs {
+      margin: 53px 9px 49px 20px;
+    }
+    @include xxs {
+      margin: 53px 8px 49px 18px;
+    }
+    @include tn {
+      margin: 53px 8px 49px 16px;
+    }
+  }
+  &-section4__medium-title7 {
+    @include font-face($font_type_8, $color_type_2, 0px);
+    @include lg {
+      font-size: 25px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 22px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+    @include xs {
+      font-size: 19px;
+    }
+    @include xxs {
+      font-size: 18px;
+    }
+    @include tn {
+      font-size: 17px;
+    }
+  }
+  &-section4__medium-title7.layout {
+    position: relative;
+  }
+  &-section4__medium-title71-box {
+    @include lg {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include md {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include sm {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include xs {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include xxs {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include tn {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+  &-section4__medium-title71-box.layout {
+    position: relative;
+    margin: 22px 27px 0px 0px;
+    @include lg {
+      margin: 22px 24px 0px 0px;
+    }
+    @include md {
+      margin: 22px 20px 0px 0px;
+    }
+    @include sm {
+      margin: 22px 17px 0px 0px;
+    }
+    @include xs {
+      margin: 22px 15px 0px 0px;
+    }
+    @include xxs {
+      margin: 22px 14px 0px 0px;
+    }
+    @include tn {
+      margin: 22px 13px 0px 0px;
+    }
+  }
+  &-section4__medium-title71 {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    @include font-face($font_type_8, $color_type_2, 0px);
+    white-space: pre-wrap;
+    @include lg {
+      font-size: 25px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 22px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+    @include xs {
+      font-size: 19px;
+    }
+    @include xxs {
+      font-size: 18px;
+    }
+    @include tn {
+      font-size: 17px;
+    }
+  }
+  &-section4__medium-title7.layout1 {
+    position: relative;
+    margin: 53px 0px 0px;
+  }
+  &-section4__medium-title72-box {
+    @include lg {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include md {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include sm {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include xs {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include xxs {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include tn {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+  &-section4__medium-title72-box.layout {
+    position: relative;
+    margin: 22px 0px 0px;
+  }
+  &-section4__medium-title72 {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    @include font-face($font_type_8, $color_type_2, 0px);
+    white-space: pre-wrap;
+    @include lg {
+      font-size: 25px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 22px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+    @include xs {
+      font-size: 19px;
+    }
+    @include xxs {
+      font-size: 18px;
+    }
+    @include tn {
+      font-size: 17px;
+    }
+  }
+  &-section4__flex-spacer1 {
+    flex: 0 1 39px;
+    @include xl {
+      display: none;
+    }
+  }
+  &-section4__flex-item1 {
+    @include flex-column;
+    position: relative;
+    flex: 1 1 518px;
+    @include xl {
+      flex: 0 0 100%;
+    }
+  }
+  &-section4__flex3 {
+    @include flex-column;
+  }
+  &-section4__flex3.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 8px 0px 0px;
+  }
+  &-section4__hero-title1.layout2 {
+    position: absolute;
+    top: 283px;
+    bottom: 36px;
+    left: 0px;
+    right: 0px;
+    width: 20.85%;
+    margin: 0px auto;
+  }
+  &-section4__group.layout3 {
+    position: relative;
+    height: 377px;
+    margin: 62px 0px 0px;
+  }
+  &-section4__hero-title1.layout3 {
+    position: absolute;
+    top: 294px;
+    bottom: 25px;
+    left: 0px;
+    right: 0px;
+    width: 20.85%;
+    margin: 0px auto;
+  }
+  &-section4__subtitle.layout1 {
+    position: absolute;
+    top: 167px;
+    bottom: 182px;
+    left: 0px;
+    right: 0px;
+    width: 50px;
+    min-width: 50px;
+    margin: 0px auto;
+  }
+  &-section5__section5 {
+    @include flex-column;
+  }
+  &-section5__section5.layout {
+    position: relative;
+  }
+  &-section5__flex {
+    @include flex-column;
+  }
+  &-section5__flex.layout3 {
+    position: relative;
+    flex-grow: 1;
+    width: 86.04%;
+    margin: 56px auto 30px;
+    @include xxl {
+      width: 89.15%;
+    }
+    @include xl {
+      width: 91.64%;
+    }
+    @include lg {
+      width: 93.59%;
+    }
+    @include md {
+      width: 95.12%;
+    }
+    @include sm {
+      width: 96.29%;
+    }
+    @include xs {
+      width: 97.19%;
+    }
+    @include xxs {
+      width: 97.88%;
+    }
+    @include tn {
+      width: 98.4%;
+    }
+  }
+  &-section5__flex.layout {
+    position: relative;
+    width: 8.78%;
+    margin: 0px 90.98% 0px 0.24%;
+  }
+  &-section5__big-title2 {
+    @include font-face($font_type_3, $color_type_6, 0px);
+    @include lg {
+      font-size: 30px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 27px;
+    }
+    @include sm {
+      font-size: 24px;
+    }
+    @include xs {
+      font-size: 22px;
+    }
+    @include xxs {
+      font-size: 21px;
+    }
+    @include tn {
+      font-size: 20px;
+    }
+  }
+  &-section5__big-title2.layout {
+    position: relative;
+    margin: 0px 0px 0px 1px;
+    @include lg {
+      margin: 0px 0px 0px 5px;
+    }
+  }
+  &-section5__line {
+    background: var(--src) center center / cover no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  &-section5__flex1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+    @include md {
+      flex-wrap: wrap;
+      align-content: flex-start;
+      row-gap: 16px;
+    }
+    .news_list{
+        @include font-face($font_type_9, $color_type_0, 0px);
+        min-width: 236px;
+        text-align: center;
+        padding: 10px 20px;
+        transition: all 0.75s;
+        &:hover{
+            color: #fff;
+            background-color: $color_type_3;
+        }
+    }
+  }
+
+  &-section5__group {
+    @include flex-column;
+  }
+  &-section5__group.layout {
+    position: relative;
+    height: 439px;
+    margin: 56px 0px 0px 1px;
+    @include lg {
+      margin: 56px 0px 0px 5px;
+    }
+  }
+  &-section5__cover1 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section5__cover1.layout {
+    position: absolute;
+    top: 0px;
+    height: 439px;
+    left: 0px;
+    right: 0px;
+    width: 86.86%;
+    margin: 0px 0% 0px 13.14%;
+  }
+  &-section5__flex2 {
+    display: flex;
+    @include xl {
+      flex-wrap: wrap;
+      align-content: flex-start;
+      row-gap: 16px;
+    }
+  }
+  &-section5__flex2.layout {
+    position: absolute;
+    top: 31px;
+    bottom: 29px;
+    left: 0px;
+    right: 0px;
+  }
+  &-section5__flex-item6 {
+    @include flex-column;
+    position: relative;
+    flex: 1 1 518px;
+    @include xl {
+      flex: 0 0 100%;
+    }
+  }
+  &-section5__cover-block {
+    @include flex-column;
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section5__cover-block.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px 0px 2px;
+  }
+  &-section5__subtitle3 {
+    @include font-face($font_type_13, $color_type_1, 0px);
+    @include lg {
+      font-size: 21px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 20px;
+    }
+    @include sm {
+      font-size: 18px;
+    }
+    @include xxs {
+      font-size: 17px;
+    }
+    @include tn {
+      font-size: 16px;
+    }
+  }
+  &-section5__subtitle3.layout {
+    position: relative;
+    flex-grow: 1;
+    width: 50px;
+    min-width: 50px;
+    margin: 169px auto 180px;
+  }
+  &-section5__flex-spacer5 {
+    flex: 0 1 67px;
+    @include xl {
+      display: none;
+    }
+  }
+  &-section5__flex-item7 {
+    @include flex-column;
+    position: relative;
+    flex: 1 1 1020px;
+    @include xl {
+      flex: 0 0 100%;
+    }
+  }
+  &-section5__flex.layout1 {
+    position: relative;
+    flex-grow: 1;
+    margin: 11px 0px 0px;
+  }
+  &-section5__flex3 {
+    display: flex;
+    @include lg {
+      flex-wrap: wrap;
+      align-content: flex-start;
+      row-gap: 16px;
+    }
+  }
+  &-section5__flex3.layout {
+    position: relative;
+    margin: 0px 2px;
+    @include lg {
+      margin: 0px 5px;
+    }
+  }
+  &-section5__flex-item8 {
+    // @include flex-column;
+    // position: relative;
+    // flex: 1 1 225px;
+    // @include lg {
+    //   flex: 0 0 100%;
+    // }
+    width: 225px;
+    height: 52px;
+    border: 1px solid #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: #666666;
+    margin-right: 16px;
+  }
+//   &-section5__group1 {
+//     @include flex-column;
+//     width: 100%;
+//     height: 100%;
+//   }
+//   &-section5__medium-title41 {
+//     @include h-center-content;
+//     font: $font_type_9;
+//     color: $color_type_0;
+//     text-align: center;
+//     letter-spacing: 0px;
+//     width: 100%;
+//     height: 100%;
+//     @include lg {
+//       font-size: 24px;
+//       text-align: center;
+//     }
+//     @include md {
+//       font-size: 22px;
+//     }
+//     @include sm {
+//       font-size: 20px;
+//     }
+//     @include xs {
+//       font-size: 19px;
+//     }
+//     @include xxs {
+//       font-size: 18px;
+//     }
+//     @include tn {
+//       font-size: 17px;
+//     }
+//   }
+//   &-section5__image {
+//     background: var(--src) center center / cover no-repeat;
+//   }
+//   &-section5__image.layout {
+//     position: absolute;
+//     top: 0px;
+//     height: 52px;
+//     left: 0px;
+//     width: 225px;
+//     min-width: 225px;
+//   }
+//   &-section5__flex-spacer6 {
+//     flex: 0 1 18px;
+//     @include lg {
+//       display: none;
+//     }
+//   }
+  &-section5__flex-item9 {
+    @include flex-column;
+    position: relative;
+    flex: 1 1 149px;
+    @include lg {
+      flex: 0 0 100%;
+    }
+  }
+  &-section5__block1 {
+    @include flex-column;
+  }
+  &-section5__block1.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 9px 0px 7px;
+  }
+  &-section5__big-title4 {
+    @include font-face($font_type_7, $color_type_0, 0px);
+    @include lg {
+      font-size: 27px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 24px;
+    }
+    @include sm {
+      font-size: 21px;
+    }
+    @include xs {
+      font-size: 20px;
+    }
+    @include xxs {
+      font-size: 18px;
+    }
+    @include tn {
+      font-size: 17px;
+    }
+  }
+  &-section5__big-title4.layout {
+    position: relative;
+    flex-grow: 1;
+  }
+  &-section5__hero-title {
+    @include font-face($font_type_2, $color_type_7, 0px);
+    @include lg {
+      font-size: 34px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 30px;
+    }
+    @include sm {
+      font-size: 26px;
+    }
+    @include xs {
+      font-size: 25px;
+    }
+    @include xxs {
+      font-size: 23px;
+    }
+    @include tn {
+      font-size: 22px;
+    }
+  }
+  &-section5__hero-title.layout {
+    position: relative;
+    margin: 26px 0px 0px;
+  }
+  &-section5__big-title3-box {
+    @include lg {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include md {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include sm {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include xs {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include xxs {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @include tn {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+  &-section5__big-title3-box.layout {
+    position: relative;
+    margin: 44px 0px 0px;
+  }
+  &-section5__big-title3 {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    @include font-face($font_type_5, $color_type_7, 0px);
+    font-size: 28px;
+    white-space: pre-wrap;
+    @include lg {
+      font-size: 27px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 24px;
+    }
+    @include sm {
+      font-size: 21px;
+    }
+    @include xs {
+      font-size: 20px;
+    }
+    @include xxs {
+      font-size: 18px;
+    }
+    @include tn {
+      font-size: 17px;
+    }
+  }
+  &-section5__group.layout2 {
+    position: relative;
+    height: 439px;
+    margin: 38px 5px 0px 1px;
+    @include lg {
+      margin: 38px 5px 0px;
+    }
+  }
+  &-section5__cover {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section5__cover.layout {
+    position: absolute;
+    top: 0px;
+    height: 439px;
+    left: 0px;
+    right: 0px;
+    width: 87.18%;
+    margin: 0px 12.82% 0px 0%;
+  }
+  &-section5__flex4 {
+    display: flex;
+    @include xl {
+      flex-wrap: wrap;
+      align-content: flex-start;
+      row-gap: 16px;
+    }
+  }
+  &-section5__flex4.layout {
+    position: absolute;
+    top: 31px;
+    bottom: 31px;
+    left: 0px;
+    right: 0px;
+    width: 95.26%;
+    margin: 0px 0% 0px 4.74%;
+  }
+  &-section5__flex-item10 {
+    @include flex-column;
+    position: relative;
+    flex: 1 1 947px;
+    @include xl {
+      flex: 0 0 100%;
+    }
+  }
+  &-section5__flex.layout2 {
+    position: relative;
+    flex-grow: 1;
+    margin: 31px 0px 30px;
+  }
+  &-section5__flex5 {
+    display: flex;
+  }
+  &-section5__flex5.layout {
+    position: relative;
+    margin: 0px 7px;
+    @include lg {
+      margin: 0px 6px;
+    }
+    @include md {
+      margin: 0px 5px;
+    }
+  }
+  &-section5__flex-item11 {
+    @include flex-column;
+    position: relative;
+    flex: 0 1 225px;
+  }
+  &-section5__group.layout1 {
+    position: relative;
+    height: 52px;
+  }
+  &-section5__medium-title4.layout1 {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    width: 38.67%;
+    margin: 0px auto;
+  }
+  &-section5__image.layout1 {
+    position: absolute;
+    top: 0px;
+    height: 52px;
+    left: 0px;
+    right: 0px;
+  }
+  &-section5__flex-spacer7 {
+    flex: 0 1 18px;
+  }
+  &-section5__flex-item12 {
+    @include flex-column;
+    position: relative;
+    flex: 0 1 149px;
+  }
+  &-section5__hero-title.layout1 {
+    position: relative;
+    margin: 24px 38px 0px 0px;
+    @include lg {
+      margin: 24px 33px 0px 0px;
+    }
+    @include md {
+      margin: 24px 27px 0px 0px;
+    }
+    @include sm {
+      margin: 24px 23px 0px 0px;
+    }
+    @include xs {
+      margin: 24px 20px 0px 0px;
+    }
+    @include xxs {
+      margin: 24px 18px 0px 0px;
+    }
+    @include tn {
+      margin: 24px 16px 0px 0px;
+    }
+  }
+  &-section5__flex-spacer8 {
+    flex: 0 1 103px;
+    @include xl {
+      display: none;
+    }
+  }
+  &-section5__flex-item13 {
+    @include flex-column;
+    position: relative;
+    flex: 1 1 518px;
+    @include xl {
+      flex: 0 0 100%;
+    }
+  }
+  &-section5__cover-block1 {
+    @include flex-column;
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section5__cover-block1.layout {
+    position: relative;
+    flex-grow: 1;
+  }
+  &-section5__subtitle4 {
+    @include font-face($font_type_15, $color_type_1, 0px);
+    @include lg {
+      font-size: 21px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 19px;
+    }
+    @include sm {
+      font-size: 18px;
+    }
+    @include xs {
+      font-size: 17px;
+    }
+    @include tn {
+      font-size: 16px;
+    }
+  }
+  &-section5__subtitle4.layout {
+    position: relative;
+    flex-grow: 1;
+    width: 48px;
+    min-width: 48px;
+    margin: 165px auto 185px;
+  }
+  &-section5__block3 {
+    @include flex-column;
+  }
+  &-section5__block3.layout {
+    position: relative;
+    width: 15.01%;
+    margin: 70px auto 0px;
+    .more_btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 248px;
+        height: 70px;
+        border-radius: 26px;
+        border: 1px solid #b2b2b2;
+        background: #b2b2b2;
+        transition: all 0.75s;
+        &:hover{
+            background: transparent;
+            .index-section5__big-title5{
+                color: #b2b2b2;
+            }
+        }
+    }
+  }
+  &-section5__group2 {
+    @include flex-column;
+  }
+  &-section5__group2.layout {
+    position: relative;
+    flex-grow: 1;
+  }
+  &-section5__background {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section5__background.layout {
+    position: absolute;
+    top: 0px;
+    height: 62px;
+    left: 0px;
+    width: 248px;
+    min-width: 248px;
+  }
+  &-section5__big-title5 {
+    @include font-face($font_type_6, $color_type_5, 0px);
+    transition: all 0.75s;
+    @include lg {
+      font-size: 27px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 24px;
+    }
+    @include sm {
+      font-size: 21px;
+    }
+    @include xs {
+      font-size: 20px;
+    }
+    @include xxs {
+      font-size: 18px;
+    }
+    @include tn {
+      font-size: 17px;
+    }
+  }
+  &-section6__section6 {
+    @include flex-column;
+  }
+  &-section6__section6.layout {
+    position: relative;
+  }
+  &-section6__flex {
+    @include flex-column;
+  }
+  &-section6__flex.layout {
+    position: relative;
+    flex-grow: 1;
+    width: 7.55%;
+    margin: 48px 86.61% 20px 5.83%;
+  }
+  &-section6__big-title {
+    @include font-face($font_type_4, $color_type_6, 0px);
+    @include lg {
+      font-size: 30px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 27px;
+    }
+    @include sm {
+      font-size: 24px;
+    }
+    @include xs {
+      font-size: 22px;
+    }
+    @include xxs {
+      font-size: 21px;
+    }
+    @include tn {
+      font-size: 20px;
+    }
+  }
+  &-section6__big-title.layout {
+    position: relative;
+    margin: 0px 0px 0px 1px;
+    @include lg {
+      margin: 0px 0px 0px 5px;
+    }
+  }
+  &-section6__line {
+    background: var(--src) center center / cover no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  &-section7__section7 {
+    @include flex-column;
+  }
+  &-section7__section7.layout {
+    position: relative;
+  }
+  &-section7__group {
+    @include flex-column;
+  }
+  &-section7__group.layout1 {
+    position: relative;
+    height: 453px;
+    width: 91.72%;
+    margin: 55px 2.45% 37px 5.83%;
+  }
+  &-section7__box1 {
+    background-color: $color_type_3;
+  }
+  &-section7__box1.layout {
+    position: absolute;
+    top: -47px;
+    height: 538px;
+    left: -112px;
+    right: -45px;
+  }
+  &-section7__group.layout {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    bottom: 30px;
+    width: 114px;
+    min-width: 114px;
+    right: 30px;
+  }
+  &-section7__icon {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section7__icon.layout {
+    position: relative;
+    height: 114px;
+    width: 114px;
+    min-width: 114px;
+  }
+  &-section7__flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    @include md {
+      flex-wrap: wrap;
+      align-content: flex-start;
+      row-gap: 16px;
+    }
+  }
+  &-section7__flex-item {
+    @include flex-column;
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 172px;
+    @include md {
+      flex: 0 0 100%;
+      min-width: unset;
+    }
+  }
+  &-section7__flex1 {
+    @include flex-column;
+  }
+  &-section7__flex1.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px 0px 90px;
+  }
+  &-section7__flex2 {
+    @include flex-column;
+  }
+  &-section7__flex2.layout {
+    position: relative;
+  }
+  &-section7__medium-title {
+    @include font-face($font_type_8, $color_type_5, 0px);
+    @include lg {
+      font-size: 25px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 22px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+    @include xs {
+      font-size: 19px;
+    }
+    @include xxs {
+      font-size: 18px;
+    }
+    @include tn {
+      font-size: 17px;
+    }
+  }
+  &-section7__medium-title.layout {
+    position: relative;
+    margin: 0px 0px 0px 1px;
+    @include lg {
+      margin: 0px 0px 0px 5px;
+    }
+  }
+  &-section7__line1 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section7__line1.layout {
+    position: relative;
+    height: 0px;
+    margin: 7px 8px 0px 0px;
+    @include lg {
+      margin: 7px 7px 0px 0px;
+    }
+    @include md {
+      margin: 7px 6px 0px 0px;
+    }
+    @include sm {
+      margin: 7px 5px 0px 0px;
+    }
+  }
+  &-section7__subtitle2 {
+    @include font-face($font_type_12, $color_type_5, 0px);
+    @include lg {
+      font-size: 22px;
+      text-align: left;
+    }
+    @include md {
+      font-size: 20px;
+    }
+    @include sm {
+      font-size: 19px;
+    }
+    @include xs {
+      font-size: 18px;
+    }
+    @include xxs {
+      font-size: 17px;
+    }
+    @include tn {
+      font-size: 16px;
+    }
+  }
+  &-section7__subtitle2.layout {
+    position: relative;
+    margin: 20px 1px 0px;
+    @include lg {
+      margin: 20px 5px 0px;
+    }
+  }
+  &-section7__subtitle2.layout1 {
+    position: relative;
+    margin: 16px 1px 0px;
+    @include lg {
+      margin: 16px 5px 0px;
+    }
+  }
+  &-section7__subtitle2.layout2 {
+    position: relative;
+    margin: 16px 1px 0px;
+    @include lg {
+      margin: 16px 5px 0px;
+    }
+  }
+  &-section7__subtitle2.layout3 {
+    position: relative;
+    margin: 16px 1px 0px;
+    @include lg {
+      margin: 16px 5px 0px;
+    }
+  }
+  &-section7__flex-spacer {
+    flex: 1 1 100px;
+    @include md {
+      display: none;
+    }
+  }
+  &-section7__flex-item1 {
+    @include flex-column;
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 117px;
+    @include md {
+      flex: 0 0 100%;
+      min-width: unset;
+    }
+  }
+  &-section7__flex3 {
+    @include flex-column;
+  }
+  &-section7__flex3.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px 0px 135px;
+  }
+  &-section7__flex4 {
+    @include flex-column;
+  }
+  &-section7__flex4.layout {
+    position: relative;
+  }
+  &-section7__medium-title.layout1 {
+    position: relative;
+  }
+  &-section7__line2 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section7__line2.layout {
+    position: relative;
+    height: 0px;
+    margin: 7px 6px 0px 0px;
+    @include lg {
+      margin: 7px 5px 0px 0px;
+    }
+  }
+  &-section7__subtitle2.layout4 {
+    position: relative;
+    margin: 20px 39px 0px 0px;
+    @include lg {
+      margin: 20px 34px 0px 0px;
+    }
+    @include md {
+      margin: 20px 28px 0px 0px;
+    }
+    @include sm {
+      margin: 20px 23px 0px 0px;
+    }
+    @include xs {
+      margin: 20px 21px 0px 0px;
+    }
+    @include xxs {
+      margin: 20px 18px 0px 0px;
+    }
+    @include tn {
+      margin: 20px 17px 0px 0px;
+    }
+  }
+  &-section7__subtitle2.layout5 {
+    position: relative;
+    margin: 16px 15px 0px 0px;
+    @include lg {
+      margin: 16px 13px 0px 0px;
+    }
+    @include md {
+      margin: 16px 11px 0px 0px;
+    }
+    @include sm {
+      margin: 16px 9px 0px 0px;
+    }
+    @include xxs {
+      margin: 16px 8px 0px 0px;
+    }
+    @include tn {
+      margin: 16px 7px 0px 0px;
+    }
+  }
+  &-section7__subtitle2.layout6 {
+    position: relative;
+    margin: 16px 15px 0px 0px;
+    @include lg {
+      margin: 16px 13px 0px 0px;
+    }
+    @include md {
+      margin: 16px 11px 0px 0px;
+    }
+    @include sm {
+      margin: 16px 9px 0px 0px;
+    }
+    @include xxs {
+      margin: 16px 8px 0px 0px;
+    }
+    @include tn {
+      margin: 16px 7px 0px 0px;
+    }
+  }
+  &-section7__flex-item2 {
+    @include flex-column;
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 126px;
+    @include md {
+      flex: 0 0 100%;
+      min-width: unset;
+    }
+  }
+  &-section7__flex5 {
+    @include flex-column;
+  }
+  &-section7__flex5.layout {
+    position: relative;
+    flex-grow: 1;
+  }
+  &-section7__flex6 {
+    @include flex-column;
+  }
+  &-section7__flex6.layout {
+    position: relative;
+    margin: 0px 9px 0px 0px;
+    @include lg {
+      margin: 0px 8px 0px 0px;
+    }
+    @include md {
+      margin: 0px 7px 0px 0px;
+    }
+    @include sm {
+      margin: 0px 6px 0px 0px;
+    }
+    @include xs {
+      margin: 0px 5px 0px 0px;
+    }
+  }
+  &-section7__medium-title.layout2 {
+    position: relative;
+  }
+  &-section7__subtitle2.layout7 {
+    position: relative;
+    margin: 20px 0px 0px;
+  }
+  &-section7__subtitle2.layout8 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section7__subtitle2.layout9 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section7__subtitle2.layout10 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section7__subtitle2.layout11 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section7__subtitle2.layout12 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section7__flex-item3 {
+    @include flex-column;
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 117px;
+    @include md {
+      flex: 0 0 100%;
+      min-width: unset;
+    }
+  }
+  &-section7__flex7 {
+    @include flex-column;
+  }
+  &-section7__flex7.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px 0px 135px;
+  }
+  &-section7__flex8 {
+    @include flex-column;
+  }
+  &-section7__flex8.layout {
+    position: relative;
+  }
+  &-section7__medium-title.layout3 {
+    position: relative;
+  }
+  &-section7__subtitle2.layout13 {
+    position: relative;
+    margin: 20px 15px 0px 0px;
+    @include lg {
+      margin: 20px 13px 0px 0px;
+    }
+    @include md {
+      margin: 20px 11px 0px 0px;
+    }
+    @include sm {
+      margin: 20px 9px 0px 0px;
+    }
+    @include xxs {
+      margin: 20px 8px 0px 0px;
+    }
+    @include tn {
+      margin: 20px 7px 0px 0px;
+    }
+  }
+  &-section7__subtitle2.layout14 {
+    position: relative;
+    margin: 16px 15px 0px 0px;
+    @include lg {
+      margin: 16px 13px 0px 0px;
+    }
+    @include md {
+      margin: 16px 11px 0px 0px;
+    }
+    @include sm {
+      margin: 16px 9px 0px 0px;
+    }
+    @include xxs {
+      margin: 16px 8px 0px 0px;
+    }
+    @include tn {
+      margin: 16px 7px 0px 0px;
+    }
+  }
+  &-section7__subtitle2.layout15 {
+    position: relative;
+    margin: 16px 15px 0px 0px;
+    @include lg {
+      margin: 16px 13px 0px 0px;
+    }
+    @include md {
+      margin: 16px 11px 0px 0px;
+    }
+    @include sm {
+      margin: 16px 9px 0px 0px;
+    }
+    @include xxs {
+      margin: 16px 8px 0px 0px;
+    }
+    @include tn {
+      margin: 16px 7px 0px 0px;
+    }
+  }
+  &-section7__flex-item4 {
+    @include flex-column;
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 126px;
+    @include md {
+      flex: 0 0 100%;
+      min-width: unset;
+    }
+  }
+  &-section7__flex9 {
+    @include flex-column;
+  }
+  &-section7__flex9.layout {
+    position: relative;
+    flex-grow: 1;
+  }
+  &-section7__flex10 {
+    @include flex-column;
+  }
+  &-section7__flex10.layout {
+    position: relative;
+    margin: 0px 9px 0px 0px;
+    @include lg {
+      margin: 0px 8px 0px 0px;
+    }
+    @include md {
+      margin: 0px 7px 0px 0px;
+    }
+    @include sm {
+      margin: 0px 6px 0px 0px;
+    }
+    @include xs {
+      margin: 0px 5px 0px 0px;
+    }
+  }
+  &-section7__medium-title.layout4 {
+    position: relative;
+  }
+  &-section7__subtitle2.layout16 {
+    position: relative;
+    margin: 20px 0px 0px;
+  }
+  &-section7__subtitle2.layout17 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section7__subtitle2.layout18 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section7__subtitle2.layout19 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section7__subtitle2.layout20 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section7__subtitle2.layout21 {
+    position: relative;
+    margin: 16px 0px 0px;
+  }
+  &-section7__flex-item5 {
+    @include flex-column;
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 127px;
+    @include md {
+      flex: 0 0 100%;
+      min-width: unset;
+    }
+  }
+  &-section7__flex11 {
+    @include flex-column;
+  }
+  &-section7__flex11.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px 0px 135px;
+  }
+  &-section7__flex12 {
+    @include flex-column;
+  }
+  &-section7__flex12.layout {
+    position: relative;
+    margin: 0px 9px 0px 0px;
+    @include lg {
+      margin: 0px 8px 0px 0px;
+    }
+    @include md {
+      margin: 0px 7px 0px 0px;
+    }
+    @include sm {
+      margin: 0px 6px 0px 0px;
+    }
+    @include xs {
+      margin: 0px 5px 0px 0px;
+    }
+  }
+  &-section7__line3 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section7__line3.layout {
+    position: relative;
+    height: 0px;
+    margin: 7px 6px 0px 0px;
+    @include lg {
+      margin: 7px 5px 0px 0px;
+    }
+  }
+  &-section7__subtitle2.layout22 {
+    position: relative;
+    margin: 20px 0px 0px 1px;
+    @include lg {
+      margin: 20px 0px 0px 5px;
+    }
+  }
+  &-section7__subtitle2.layout23 {
+    position: relative;
+    margin: 16px 24px 0px 1px;
+    @include lg {
+      margin: 16px 21px 0px 5px;
+    }
+    @include md {
+      margin: 16px 18px 0px 5px;
+    }
+    @include sm {
+      margin: 16px 15px 0px 5px;
+    }
+    @include xs {
+      margin: 16px 14px 0px 5px;
+    }
+    @include xxs {
+      margin: 16px 12px 0px 5px;
+    }
+    @include tn {
+      margin: 16px 11px 0px 5px;
+    }
+  }
+  &-section7__subtitle2.layout24 {
+    position: relative;
+    margin: 16px 24px 0px 1px;
+    @include lg {
+      margin: 16px 21px 0px 5px;
+    }
+    @include md {
+      margin: 16px 18px 0px 5px;
+    }
+    @include sm {
+      margin: 16px 15px 0px 5px;
+    }
+    @include xs {
+      margin: 16px 14px 0px 5px;
+    }
+    @include xxs {
+      margin: 16px 12px 0px 5px;
+    }
+    @include tn {
+      margin: 16px 11px 0px 5px;
+    }
+  }
+  &-section7__flex-item6 {
+    @include flex-column;
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 175px;
+    @include md {
+      flex: 0 0 100%;
+      min-width: unset;
+    }
+  }
+  &-section7__flex13 {
+    @include flex-column;
+  }
+  &-section7__flex13.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px 0px 135px;
+  }
+  &-section7__flex14 {
+    @include flex-column;
+  }
+  &-section7__flex14.layout {
+    position: relative;
+    width: 118px;
+    min-width: 118px;
+  }
+  &-section7__line2.layout1 {
+    position: relative;
+    height: 0px;
+    margin: 7px 7px 0px 0px;
+    @include lg {
+      margin: 7px 6px 0px 0px;
+    }
+    @include md {
+      margin: 7px 5px 0px 0px;
+    }
+  }
+  &-section7__subtitle2.layout25 {
+    position: relative;
+    margin: 20px 0px 0px 1px;
+    @include lg {
+      margin: 20px 0px 0px 5px;
+    }
+  }
+  &-section7__subtitle2.layout26 {
+    position: relative;
+    margin: 16px 1px 0px;
+    @include lg {
+      margin: 16px 5px 0px;
+    }
+  }
+  &-section7__subtitle2.layout27 {
+    position: relative;
+    margin: 16px 24px 0px 1px;
+    @include lg {
+      margin: 16px 21px 0px 5px;
+    }
+    @include md {
+      margin: 16px 18px 0px 5px;
+    }
+    @include sm {
+      margin: 16px 15px 0px 5px;
+    }
+    @include xs {
+      margin: 16px 14px 0px 5px;
+    }
+    @include xxs {
+      margin: 16px 12px 0px 5px;
+    }
+    @include tn {
+      margin: 16px 11px 0px 5px;
+    }
+  }
+}
+
+.nav-list, .footer-list, .nav-list-1{
+    transition: all 0.75s;
+}
+.nav-list, .footer-list{
+    &:hover{
+        color: #000;
+    }
+}
+.nav-list-1{
+    &:hover{
+        color:#b2b2b2;
+    }
+}
+
+.swiper{
+    width: 100vw;
+    margin: 3em 0 5em;
+}

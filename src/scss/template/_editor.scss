@@ -1,0 +1,98 @@
+.editor_Content {
+    position: relative;
+    z-index: 3;
+    ol {
+        list-style-type: decimal;
+        padding-left: 10px;
+    }
+    ul {
+        list-style-type: initial;
+        padding-left: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto !important;
+    }
+    b,
+    strong {
+        font-weight: bold;
+        font-size: inherit;
+    }
+    em {
+        font-style: italic;
+    }
+    a {
+        text-decoration: underline;
+        color: #0782c1;
+    }
+    iframe {
+        max-width: 100%;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: inherit;
+    }
+    blockquote {
+        font-style: italic;
+        padding: 2px 20px 0 8px;
+        margin-left: 40px;
+        border-left: 5px solid #ccc;
+    }
+    td,
+    th,
+    tr {
+        margin: initial;
+    }
+    .tbcolor {
+        border-collapse: inherit;
+    }
+}
+
+.editor_box {
+    margin: auto;
+    line-height: 1.875;
+    font-size: pxToEm(16);
+    color: #fff;
+    max-width: 100%;
+    ul,
+    ol {
+        padding-left: 40px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    iframe {
+        max-width: 100%;
+        @media screen and (max-width: 767px) {
+            height: 100% !important;
+        }
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: inherit;
+    }
+}
+
+.mo_use {
+    display: none;
+    @media (max-width: 767px) {
+        display: block;
+    }
+}
+.pc_use {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}

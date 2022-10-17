@@ -1,0 +1,29 @@
+.top-btn {
+    position: fixed;
+    z-index: 99;
+    right: 3.4%;
+    bottom: 1em;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #0a1e3f;
+    // opacity: 0;
+    transition: opacity 0.75s ease;
+    &.show {
+        opacity: 1;
+        pointer-events: all;
+    }
+    &.change{
+        position: absolute;
+    }
+    span:first-child{
+        width: 24px;
+        height: 18px;
+        background: url('../images/gotop_arrow.png') center / contain no-repeat;
+    }
+}
