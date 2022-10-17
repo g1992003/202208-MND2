@@ -3,6 +3,8 @@
 
 $(function () {
 
+
+    // ------------section_2-------------
     $('.main_box li').on('click', function () {
         if ($(this).hasClass('active')) {
             $('.main_box li').removeClass('active')
@@ -14,22 +16,22 @@ $(function () {
         }
     })
 
-    // $('.header_list li:first-child').on('click', function () {
-    //     $(this).toggleClass('active')
-    // })
-    $('.header_list .logBox').on('click', function(){
-        if($('body').hasClass('logIn')){
-            $('body').removeClass('logIn')
-            $('body').addClass('logOut')
-            $('.log').html("登出")
-        }else{
-            $('body').removeClass('logOut')
-            $('body').addClass('logIn')
-            $('.log').html("登入")
-        }
+    $('.units ul li').on('click', function(){
+        $('body').removeClass('openMenu');
+        $('.menu-ham').removeClass('hamActive');
+        $('html,body').stop(true).animate({
+            scrollTop: $('.section_2').offset().top
+        }, 750);
+        let idx = $(this).index()
+        $('.section_2 .main_box li').addClass('out')
+        $('.section_2 .main_box li').removeClass('active')
+        $('.section_2 .main_box li').eq(idx).removeClass('out')
+        $('.section_2 .main_box li').eq(idx).addClass('active')
     })
 
 
+
+    // ------------Swiper------------
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3.3,
         spaceBetween: 25,

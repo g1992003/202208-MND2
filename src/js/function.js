@@ -6,7 +6,20 @@ $(function () {
     //@prepros-prepend template/header.js
 
 
-    $('body').addClass('loading')
+    $('body').addClass('loading') 
+    
+    
+    $('.header_list .logBox').on('click', function(){
+        if($('body').hasClass('logIn')){
+            $('body').removeClass('logIn')
+            $('body').addClass('logOut')
+            $('.log').html("登出")
+        }else{
+            $('body').removeClass('logOut')
+            $('body').addClass('logIn')
+            $('.log').html("登入")
+        }
+    })
 
 
     // --------------------main min-height---------------------

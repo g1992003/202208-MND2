@@ -38,7 +38,7 @@
         height: 43px;
         margin-right: 1em;
         &:hover a{
-            background: #0a1e3f;
+            background: $primary-color;
             color: #fff;
         }
         &:first-child a{
@@ -60,7 +60,7 @@
             text-align: center;
         }
         &.active a{
-            background: #0a1e3f;
+            background: $primary-color;
             color: #fff;
         }
     }

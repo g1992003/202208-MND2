@@ -91,7 +91,7 @@ body.modal-open {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fefefe;
+    background-color: $secondary-color;
     position: relative;
     @include mediaquery(768px, 1600px){
         width: 75%;

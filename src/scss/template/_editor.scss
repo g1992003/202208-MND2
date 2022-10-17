@@ -1,6 +1,4 @@
 .editor_Content {
-    position: relative;
-    z-index: 3;
     ol {
         list-style-type: decimal;
         padding-left: 10px;
@@ -53,11 +51,13 @@
 }
 
 .editor_box {
-    margin: auto;
-    line-height: 1.875;
-    font-size: pxToEm(16);
-    color: #fff;
+    font-weight: 300;
+    line-height: 1.64;
+    font-size: pxToEm(18);
+    color: #4b4a4a;
     max-width: 100%;
+    padding: 0 16px;
+    margin-bottom: 166px;
     ul,
     ol {
         padding-left: 40px;
@@ -67,30 +67,8 @@
         max-width: 100%;
         height: auto !important;
     }
-
-    iframe {
-        max-width: 100%;
-        @media screen and (max-width: 767px) {
-            height: 100% !important;
-        }
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: inherit;
-    }
 }
 
-.mo_use {
-    display: none;
-    @media (max-width: 767px) {
-        display: block;
-    }
-}
 .pc_use {
     @media (max-width: 767px) {
         display: none;

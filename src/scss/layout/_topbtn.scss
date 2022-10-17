@@ -11,7 +11,7 @@
     height: 60px;
     border-radius: 50%;
     background: #fff;
-    border: 1px solid #0a1e3f;
+    border: 1px solid $primary-color;
     // opacity: 0;
     transition: opacity 0.75s ease;
     &.show {
