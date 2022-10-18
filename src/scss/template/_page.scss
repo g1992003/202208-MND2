@@ -24,6 +24,7 @@
         position: relative;
         cursor: pointer;
         margin: 0 5px 0 6px;
+        border-bottom: 1px solid transparent;
         @include mediaquery(768px, null) {
             &:hover{
                 a{

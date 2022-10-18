@@ -34,12 +34,24 @@ footer{
                 font-weight: 300;
                 margin-bottom: 0.37em;
                 a{
+                    position: relative;
                     display: inline-block;
-                    border: 1px solid transparent;
                     transition: all 0.75s;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 1px;
+                        background: #fff;
+                        transition: width 0.75s ease;
+                    }
                     &:hover {
                         display: inline-block;
-                        border-bottom: 1px solid #fff;
+                        &::after{
+                            width: 100%;
+                        }
                     }
                 }
             }

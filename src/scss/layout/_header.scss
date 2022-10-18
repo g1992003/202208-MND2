@@ -125,10 +125,22 @@ header{
                 li {
                     line-height: 1.8;
                     a{
-                        border-bottom: 1px solid transparent;
+                        position: relative;
                         transition: all 0.75s;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            bottom: -2px;
+                            left: 0;
+                            width: 0;
+                            height: 2px;
+                            background: #fff;
+                            transition: width 0.75s ease;
+                        }
                         &:hover{
-                            border-bottom: 2px solid #fff;
+                            &::after{
+                                width: 100%;
+                            }
                         }
                     }
                 }
