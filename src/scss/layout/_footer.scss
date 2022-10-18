@@ -8,7 +8,7 @@ footer{
     color: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 53px 0 76px;
+    padding: 53px 0 52px;
     >li{
         span{
             position: relative;
@@ -47,6 +47,18 @@ footer{
     }
 }
 
+.info{
+    width: 1168px;
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 16px;    
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 2.9em;
+    >div {
+        padding-bottom: 1em;
+    }
+}
 .logIn{
     .footer{
         >li{

@@ -5,11 +5,21 @@
 .banner{
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    .img{
+        width: 100%;
+        height: 100%;
+    }
     img{
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+    video{
+        display: block;
+        width: 100%;
+        height: 100%;
     }
     .text_box{
         position: absolute;
@@ -130,6 +140,9 @@
         .editor_Content{
             display: none;
             transition: all 0.75s;
+            .editor_box{
+                color: #fff;
+            }
         }
         &.active{
             flex: 0 0 100%;   

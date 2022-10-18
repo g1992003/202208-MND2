@@ -29,6 +29,22 @@ $(function () {
         $('.section_2 .main_box li').eq(idx).addClass('active')
     })
 
+    var url = location.href;
+    if(url.indexOf('?')!=-1){
+        var ary1 = url.split('?');
+        var ary2 = ary1[1].split('=');
+        var active = ary2[0];
+        var activev = ary2[1];
+        if(active == active){
+            $('html,body').stop(true).animate({
+                scrollTop: $('.section_2').offset().top
+            }, 750);
+            $('.section_2 .main_box li').addClass('out')
+            $('.section_2 .main_box li').removeClass('active')
+            $('.section_2 .main_box li').eq(activev).removeClass('out')
+            $('.section_2 .main_box li').eq(activev).addClass('active')
+        }
+    }
 
 
     // ------------Swiper------------

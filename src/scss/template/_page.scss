@@ -3,61 +3,61 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    @include font-size(pxToRem(16),pxToRem(18));
+    font-size: 18px;
+    margin-bottom: 6em;
     dt,
     dd {
         vertical-align: baseline;
         display: inline-block;
         text-align: center;
-        transition: all 0.5s ease;
+        transition: all 0.75s ease;
         a {
             display: block;
             text-decoration: none;
             color: #999999;
-            transition: all 0.5s ease;
-            font-weight: 600;
-            padding: 0 7px 0 8px;
+            transition: all 0.75s ease;
+            font-weight: 300;
+            padding: 0 3px;
         }
     }
     dd {
         position: relative;
         cursor: pointer;
-        margin: 0 6px;
+        margin: 0 5px 0 6px;
         @include mediaquery(768px, null) {
             &:hover{
                 a{
-                    color: #d93731;
+                    color: $primary-color;
+                    border-bottom: 1px solid $primary-color;
                 }
             }
         }
     }
     dd.active {
         a{
-            color: #d93731;
+            color: $primary-color;
+            border-bottom: 1px solid $primary-color;
         }
     }
 
     dt.rtbn a,
     dt.ltbn a {
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
         margin: 0 auto;
-        transition: 0.5s;
-        background-color: #c83554;
         border-radius: 50%;
-        transition: 0.5s ease;
-        border: 1px solid transparent;
+        transition: 0.75s ease;
+        border: 1px solid $primary-color;
         @media (min-width: 768px) {
             &:hover {  
-                border: 1px solid #c83554;
-                background-color: #fff;
+                background: $primary-color;
             }
         }
     }
     
 
     dt.ltbn a {
-        margin-right: 32px;
+        margin-right: 10px;
         position: relative;
         &::before {
             content: "";
@@ -66,7 +66,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('../images/page/page-l.png') center / 6px 10px no-repeat;
+            background: url('../images/p_arrow_l.png')  top 5px left 6px / 9px 12px no-repeat;
             transition: 0.5s ease;
         }
         &::after {
@@ -76,7 +76,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('../images/page/page-l-hover.png') center / 6px 10px no-repeat;
+            background: url('../images/p_arrow_l_h.png')  top 5px left 6px / 9px 12px no-repeat;
             transition: 0.5s ease;
             opacity: 0;
         }
@@ -90,7 +90,7 @@
     }
 
     dt.rtbn a {
-        margin-left: 32px;
+        margin-left: 14px;
         position: relative;
         &::before {
             content: "";
@@ -99,7 +99,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('../images/page/page-r.png') center / 6px 10px no-repeat;
+            background: url('../images/p_arrow_r.png')  top 5px right 6px / 9px 12px no-repeat;
             transition: 0.5s ease;
         }
         &::after {
@@ -109,7 +109,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('../images/page/page-r-hover.png') center / 6px 10px no-repeat;
+            background: url('../images/p_arrow_r_h.png')  top 5px right 6px / 9px 12px no-repeat;
             transition: 0.5s ease;
             opacity: 0;
         }
