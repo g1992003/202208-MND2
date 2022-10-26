@@ -2,7 +2,32 @@
 //@prepros-prepend template/top_menu.js
 
 $(function () {
+    let moveTop = $('.move_top')
+    let topHary = []
 
+    moveTop.each((idx,i) => { 
+        let topH = $('.move_top').eq(idx).offset().top
+        topHary.push(topH)
+    });
+
+
+     $(window).on('mousewheel', function (e) {
+        let scrollT = $(window).scrollTop()
+        for(let i=0; i <3; i++){
+            if (e.deltaY < 0) { 
+                if(scrollT > winH / 2 && scrollT < winH){
+                    $('html,body').stop(true).animate({
+                        scrollTop: topHary[0]
+                    }, 500);
+                }else if(scrollT > $('.move_top').eq(i).outerHeight() / 3 + topHary[i] && scrollT < $('.move_top').eq(i).outerHeight() + topHary[i] - 140){
+                    $('html,body').stop(true).animate({
+                        scrollTop: topHary[i+1] - 140
+                    }, 500);
+                }
+            }
+        }
+     });
+    
 
     // ------------section_2-------------
     $('.main_box li').on('click', function () {

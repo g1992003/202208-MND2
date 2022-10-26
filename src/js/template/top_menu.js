@@ -5,23 +5,25 @@ $(function(){
     }, 100);
     
     var $window = $(window);
+    var winW = $window.width();
     
     function slider_ul_list(id) {
         let obj = $('#' + id);
         let menu_box = obj.find('.item_menu_Box').width();
         //找最大父層
-        // let menu_box_parent = obj.parents('.container-topmenu').width()
+        let menu_box_parent = obj.parents('.container').width()
 				//算ul的的寬度
         let total_width = obj.find('ul').width();
         let menu_li = obj.find('li');
         let active = obj.find('.active').index();
         let active_offset = obj.find('li.active').offset().left;
         //若不是填滿container的狀態要把多的空間加回來 
-        let move = (winW - menu_box) / 2;
+        let move = (winW - menu_box_parent) / 2 + 40;
     
         let sum = 0, i = 0, sclEnd;
         let pos = new Array();
         let sumArray = new Array();
+
 
         menu_li.each(function () {
 						//pos[i]計算每一個li到window的左邊距離
@@ -65,9 +67,11 @@ $(function(){
             if (newscroll <= 0) {
                 obj.addClass('mleft');
                 obj.find('.lbtn').addClass('nopage');
-            } else if (newscroll > sumArray[sclEnd]) {
+                obj.find('.rbtn').removeClass('nopage');
+            } else if (newscroll >= sumArray[sclEnd]) {
                 obj.addClass('mright');
                 obj.find('.rbtn').addClass('nopage');
+                obj.find('.lbtn').removeClass('nopage');
             } else {
                 obj.removeClass('mleft mright');
                 obj.find('.arrow').removeClass('nopage');
