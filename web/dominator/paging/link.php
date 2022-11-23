@@ -106,7 +106,7 @@ include '../quote/head.php';
 												</td>
 												<td style="text-align: center; vertical-align: middle; word-break:break-all;font-size:30px;" width="10%">
 													<?php
-													echo ($v[$type_name] == 1) ? '<i class="fa fa-external-link" aria-hidden="true"></i>' : '<i class="fa fa-file-image-o" aria-hidden="true"></i>';
+													echo ($v[$type_name] == 1) ? '<i class="fa fa-external-link" aria-hidden="true"></i>' : '<i class="fa fa-book" aria-hidden="true"></i>';
 													?>
 
 												</td>
