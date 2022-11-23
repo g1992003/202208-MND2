@@ -1,10 +1,14 @@
 #dominator/paging
 web/dominator/paging/ckeditor
 web/dominator/paging/ckfinder
+web2/dominator/paging/ckeditor
+web2/dominator/paging/ckfinder
 
 #plug_in
 web/plug_in
 web/upload
+web2/plug_in
+web2/upload
 
 DB/*.ipynb
 DB/*.mdf
