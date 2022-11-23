@@ -11,7 +11,7 @@ $query = "SELECT * FROM about WHERE a_id IN (1,2,3,4,5)";
 $article_data = sql_data($query, $link);
 
 //處室
-$query = "SELECT d_class.dc_id,dc_title FROM d_class INNER JOIN news ON d_class.dc_id = news.dc_id ORDER BY dc_order";
+$query = "SELECT d_class.dc_id,dc_title FROM d_class INNER JOIN news ON d_class.dc_id = news.dc_id WHERE n_status = 1 AND n_page = 1 ORDER BY dc_order";
 $depart_data = sql_data($query, $link, 2, "dc_id");
 
 //忠信報
