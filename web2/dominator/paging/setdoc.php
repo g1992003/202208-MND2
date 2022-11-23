@@ -110,7 +110,7 @@ include '../quote/head.php';
 													<div class="form-group">
 														<label class="col-sm-3 col-md-3 col-lg-2 control-label">更換 <?php echo $title[$k]; ?></label>
 														<div class="col-sm-9 col-md-9 col-lg-10">
-															<!-- <input type='hidden' name='<?php echo $field_name; ?>' id='img_name<?php echo $field_id; ?>'> -->
+															<input type='hidden' name='<?php echo ($k == 26) ? $field_name : ''; ?>' id='img_name<?php echo $field_id; ?>'>
 															<a class="btn_addPic" href="javascript:void(0);">
 																<span class="filebn"><em>+</em>選擇<?php echo $title[$k]; ?></span>
 																<?php

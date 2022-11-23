@@ -9,7 +9,7 @@ if (!isset($id) || !is_numeric($id)) {
 
 //內容
 $query = "SELECT n_id,n_page,n_status,n_title,n_text,n_file,n_tag,n_unit,n_name,
-            convert(varchar, n_date, 111) AS n_date
+        DATE_FORMAT(n_date,'%Y/%m/%d') AS n_date
         FROM news WHERE n_id = $id";
 $data = sql_data($query, $link, 1);
 

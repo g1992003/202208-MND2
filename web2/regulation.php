@@ -29,8 +29,8 @@ if ($end_page - $start_page < 4) $end_page = $start_page + 4 <= $maxPage ? $star
 
 //一令到位
 $query = "SELECT n_id,n_title,n_name,n_unit,n_tag,n_file,n_no,
-            convert(varchar(4), n_date, 111) AS n_year,
-            convert(varchar(5), n_date, 101) AS n_date
+        DATE_FORMAT(n_date,'%Y') AS n_year,
+        DATE_FORMAT(n_date,'%m/%d') AS n_date
         FROM news $where ORDER BY n_order ";
 $data = sql_data($query, $link, 2, "n_id");
 
