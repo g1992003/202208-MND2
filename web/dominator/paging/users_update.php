@@ -42,7 +42,7 @@ include '../quote/head.php';
 		$main_name = "u_main_purview";
 		$sub_name = "u_sub_purview";
 
-		$sql = "SELECT $account_name,$password_name,$name_name,$main_name,$sub_name FROM [$db_name] WHERE $id_name = :id";
+		$sql = "SELECT $account_name,$password_name,$name_name,$main_name,$sub_name FROM $db_name WHERE $id_name = :id";
 		$result = $link->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
 		$result->bindParam(':id', $id, PDO::PARAM_INT);
 		$result->execute();

@@ -88,13 +88,13 @@ if (@$check_result->rowCount() == 1) { //確認是否只有抓到一筆帳號紀
 			$error_query = "UPDATE $db_set SET $error_set = $error_set + 1 $error WHERE $id_set =" . $check_row->$id_set;
 			$link->prepare($error_query)->execute();
 
-			$script = 'alert("' . $cms_lang[16][$language] . '");' . 'location.href = "../index.php";'; //告知錯誤後導回登入頁
+			$script = 'alert("' . $cms_lang[16][$language] . '");' . 'location.href = "../paging/admin.php";'; //告知錯誤後導回登入頁
 		}
 	} else { //如果帳號已鎖定
-		$script = 'alert("' . $cms_lang[17][$language] . '");' . 'location.href = "../index.php";'; //告知錯誤後導回登入頁
+		$script = 'alert("' . $cms_lang[17][$language] . '");' . 'location.href = "../paging/admin.php";'; //告知錯誤後導回登入頁
 	}
 } else { //如帳號錯誤或抓到的資料不只一筆
-	$script = 'alert("' . $cms_lang[16][$language] . '");' . 'location.href = "../index.php";'; //告知錯誤後導回登入頁
+	$script = 'alert("' . $cms_lang[16][$language] . '");' . 'location.href = "../paging/admin.php";'; //告知錯誤後導回登入頁
 }
 
 $link = null;
