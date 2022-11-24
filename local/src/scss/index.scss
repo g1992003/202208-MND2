@@ -580,11 +580,12 @@ section{
             }
         }
         .intro{
-            @include clamp(1.65 ,3);
+            @include clamp(1.65 ,2);
             font-size: 18px;
             color: #4b4a4a;
             font-family: 'Noto Sans TC';
             transition: color 0.75s ease;
+            word-break: break-word;
         }
     }
 }

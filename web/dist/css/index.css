@@ -1464,10 +1464,10 @@ section i[class^=target] {
   transition: width 0.75s ease;
 }
 .list_news li .intro {
-  height: 4.95em;
+  height: 3.3em;
   line-height: 1.65;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* 第幾行要顯示點點點 */
+  -webkit-line-clamp: 2; /* 第幾行要顯示點點點 */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1477,4 +1477,5 @@ section i[class^=target] {
   font-family: "Noto Sans TC";
   -webkit-transition: color 0.75s ease;
   transition: color 0.75s ease;
+  word-break: break-word;
 }

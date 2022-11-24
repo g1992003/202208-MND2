@@ -52,10 +52,10 @@
                     </li>
                 <?php } ?>
                 <li>
-                    <a href="regulation.html">行政規則</a>
+                    <a href="regulation.php">行政規則</a>
                 </li>
                 <li>
-                    <a href="policy.html">一令到位</a>
+                    <a href="policy.php">一令到位</a>
                 </li>
             </ul>
         </li>

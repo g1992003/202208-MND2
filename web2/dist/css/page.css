@@ -114,10 +114,6 @@ header .header_list {
   border-radius: 15px;
   background: transparent;
   color: #4b4a4a;
-  line-height: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -127,6 +123,15 @@ header .header_list {
   height: 43px;
   -webkit-transition: color 0.75s;
   transition: color 0.75s;
+  height: 2em;
+  line-height: 2;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 第幾行要顯示點點點 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: inline-block;
 }
 .top_menu.depart li a::after {
   z-index: -1;
@@ -785,10 +790,10 @@ header .header_list {
   transition: width 0.75s ease;
 }
 .list_news li .intro {
-  height: 4.95em;
+  height: 3.3em;
   line-height: 1.65;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* 第幾行要顯示點點點 */
+  -webkit-line-clamp: 2; /* 第幾行要顯示點點點 */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -798,6 +803,7 @@ header .header_list {
   font-family: "Noto Sans TC";
   -webkit-transition: color 0.75s ease;
   transition: color 0.75s ease;
+  word-break: break-word;
 }
 
 .detail {

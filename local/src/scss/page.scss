@@ -97,12 +97,12 @@ header{
                 border-radius: 15px;
                 background: transparent;
                 color: #4b4a4a;
-                line-height: 1;
-                display: flex;
                 align-items: center;
                 justify-content: center;
                 height: 43px;
                 transition: color 0.75s;
+                @include clamp(2, 1);
+                display: inline-block;
                 &::after{
                     z-index: -1;
                     width: 100%;
@@ -601,11 +601,12 @@ header{
             }
         }
         .intro{
-            @include clamp(1.65 ,3);
+            @include clamp(1.65 ,2);
             font-size: 18px;
             color: #4b4a4a;
             font-family: 'Noto Sans TC';
             transition: color 0.75s ease;
+            word-break: break-word;
         }
     }
 }
