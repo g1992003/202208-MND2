@@ -39,6 +39,25 @@
         }
     }
 }
+section{
+    position: relative;
+    i[class^=start]{
+        position: absolute;
+        left: 0;
+        top: 40%;
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+    }
+    i[class^=target]{
+        position: absolute;
+        left: 0;
+        bottom: 140px;
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+    }
+}
 .txt{
     padding: 0 2%;
 }
@@ -91,7 +110,7 @@
                 object-fit: cover;
             }
         }
-        p{
+        p.name{
             position: absolute;
             top: 187px;
             left: 0;
@@ -160,7 +179,7 @@
                     content: none;
                 }
             }
-            p{
+            p.name{
                 left: 3px;
                 i:first-child{
                     width: 240px;

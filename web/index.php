@@ -30,7 +30,7 @@ include "quote/template/head.php";
     include "quote/template/nav.php";
     ?>
     <main>
-        <div class="banner porel">
+        <section class="banner porel">
             <?php if ($banner[27]["d_text"] != "") { ?>
                 <div class="video">
                     <video autoplay loop muted id="vid">
@@ -51,14 +51,16 @@ include "quote/template/head.php";
                     </div>
                 </div>
             <?php } ?>
-        </div>
-        <div class="section_2 move_top" id="section_2">
+            <i class="start_0"></i>
+            <i class="target_0"></i>
+        </section>
+        <section class="section_2 move_top" id="section_2">
             <ul class="main_box">
                 <?php foreach ($article_data as $k => $v) { ?>
                     <li>
                         <a href="javascript:;">
                             <img src="dist/images/b<?php echo $k; ?>.jpg" alt="" />
-                            <p><?php echo $v["a_title"]; ?><i></i><i></i></p>
+                            <p class="name"><?php echo $v["a_title"]; ?><i></i><i></i></p>
                         </a>
                         <div class="editor_Content">
                             <div class="editor_box">
@@ -68,8 +70,10 @@ include "quote/template/head.php";
                     </li>
                 <?php } ?>
             </ul>
-        </div>
-        <div class="news move_top">
+            <i class="start_1"></i>
+            <i class="target_1"></i>
+        </section>
+        <section class="news move_top">
             <div class="container">
                 <div class="title">最新消息</div>
                 <div id="top-menu-ul" class="top-menu-ul">
@@ -131,9 +135,11 @@ include "quote/template/head.php";
                 <span class="txt">MORE</span>
                 <span class="icon"></span>
             </a>
-        </div>
+            <i class="start_2"></i>
+            <i class="target_2"></i>
+        </section>
         <?php if ($img_data) { ?>
-            <div class="life move_top">
+            <section class="life move_top">
                 <div class="container">
                     <div class="title">忠信報</div>
                 </div>
@@ -154,7 +160,9 @@ include "quote/template/head.php";
                     <span class="txt">MORE</span>
                     <span class="icon"></span>
                 </a>
-            </div>
+                <i class="start_3"></i>
+                <i class="target_3"></i>
+            </section>
         <?php } ?>
     </main>
     <?php include "quote/template/footer.php"; ?>
