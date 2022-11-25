@@ -36,7 +36,7 @@ if ($Authenticate == true) {
 	$link->prepare("DELETE FROM $db WHERE $id_name = $id")->execute(); //執行sql語法
 
 	if ($order_name) { //確認是否有需要確認排序的必要
-		$link->prepare("UPDATE [$db] SET $order_name = $order_name-1 WHERE $order_name >= $check_value")->execute(); //執行sql語法
+		$link->prepare("UPDATE $db SET $order_name = $order_name-1 WHERE $order_name >= $check_value")->execute(); //執行sql語法
 	}
 
 	$link->prepare("INSERT INTO record (r_date,r_text,r_name,r_account,r_ip) VALUES(getdate(),'$db 資料刪除：$id','" . $_SESSION["dominator_name"] . "','" . $_SESSION["dominator_account"] . "','" . $_SESSION["dominator_ip"] . "')")->execute(); //執行sql語法
