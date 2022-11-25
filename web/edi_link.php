@@ -31,7 +31,6 @@ include "quote/template/head.php";
 
 <body class="lang_tw logOut">
     <?php
-    include "quote/template/added.php";
     include "quote/template/nav.php";
     ?>
     <main class="link">
