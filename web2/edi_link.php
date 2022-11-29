@@ -2,6 +2,7 @@
 include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
+$id = html_decode($id);
 if (!isset($id) || !is_numeric($id)) {
     header("location:./");
     exit();

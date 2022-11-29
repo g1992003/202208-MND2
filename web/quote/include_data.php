@@ -1,5 +1,11 @@
 <?php
-session_start();
+header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
+session_start([
+    'use_only_cookies' => 1,
+    'cookie_lifetime' => 0,
+    'cookie_secure' => 0,
+    'cookie_httponly' => 1
+]);
 $this_page = $url_set . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 //TITLE資訊

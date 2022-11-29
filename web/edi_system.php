@@ -2,6 +2,7 @@
 include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
+$id = html_decode($id);
 if (!isset($id) || !is_numeric($id)) {
     header("location:./");
     exit();
@@ -16,6 +17,7 @@ if ($data["l_page"] != 1 ||  $data["l_type"] != 2) {
     exit();
 }
 
+$id = html_decode($data["l_status"]);
 if ($data["l_status"] == 0 && !isset($_SESSION["dominator_account"])) {
     header("location:./");
     exit();

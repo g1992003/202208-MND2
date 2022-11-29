@@ -5,6 +5,7 @@ include 'quote/include_data.php';
 $first_arr = reset($about_title);
 
 $id = (!isset($id)) ?  $first_arr["a_id"] : $id;
+$id = html_decode($id);
 if (!is_numeric($id)) {
     header("location:./");
     exit();
@@ -13,6 +14,7 @@ if (!is_numeric($id)) {
 $query = "SELECT * FROM about WHERE a_id = $id";
 $data = sql_data($query, $link, 1);
 
+$id = html_decode($data["a_status"]);
 if ($data["a_status"] == 0 && !isset($_SESSION["dominator_account"])) {
     header("location:./");
     exit();
