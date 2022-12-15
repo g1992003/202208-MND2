@@ -1,73 +1,28 @@
 //@prepros-prepend plugin/swiper-bundle.min.js
 //@prepros-prepend template/top_menu.js
+//@prepros-prepend plugin/jquery.mousewheel.min.js
 
-$(function () {
-    // let moveTop = $('.move_top')
-    // let topHary = []
+$(function () {   
 
-    // moveTop.each((idx,i) => { 
-    //     let topH = $('.move_top').eq(idx).offset().top
-    //     topHary.push(topH)
-    // });
+    let scrollT = $(window).scrollTop()
+    let banner = $('.banner').outerHeight()
 
-
-    //  $(window).on('mousewheel', function (e) {
-    //     let scrollT = $(window).scrollTop()
-    //     for(let i=0; i <4; i++){
-    //         let newNum = i + 1
-    //         if (e.deltaY < 0) { 
-    //             if(scrollT > winH / 2 && scrollT < winH){
-    //                 $('html,body').stop(true).animate({
-    //                     scrollTop: topHary[0]
-    //                 }, 500);
-    //             }else if(scrollT > $('.move_top').eq(newNum).outerHeight() / 3 + topHary[i] && scrollT < $('.move_top').eq(newNum).outerHeight() + topHary[i] - 140){
-    //                 $('html,body').stop(true).animate({
-    //                     scrollTop: topHary[newNum] - 140
-    //                 }, 500);
-    //             }
-    //         }
-    //     }
-    //  });
-    
-    let start = []
-    let target = []
-
-    for(let i=0 ; i<4 ; i++){
-        start.push(Math.floor($(`.start_${i}`).offset().top))
-        target.push(Math.floor($(`.target_${i}`).offset().top))
-    }
-
-    let start_1 = start[0]
-    let start_2 = start[1]
-    let start_3 = start[2]
-    let start_4 = start[3]
-    let target_1 = target[0]
-    let target_2 = target[1]
-    let target_3 = target[2]
-    let target_4 = target[3]
-
-    $(window).on('mousewheel', function(e){
-        let scrollT = $(window).scrollTop()
-        if (e.deltaY < 0) { 
-            if(scrollT > start_1 && scrollT < Math.floor($(`.section_2`).offset().top)){
-                $('html,body').stop(true).animate({
-                    scrollTop: Math.floor($(`.section_2`).offset().top)
-                }, 500);
-            }else if(scrollT > start_2 && scrollT < target_2){
-                $('html,body').stop(true).animate({
-                    scrollTop: target_2
-                }, 500);
-            }else if(scrollT > start_3 && scrollT < target_3){
-                $('html,body').stop(true).animate({
-                    scrollTop: target_3
-                }, 500);
-            }else if(scrollT > start_4 && scrollT < target_4){
-                $('html,body').stop(true).animate({
-                    scrollTop: target_4
-                }, 500);
+    $(window).bind('mousewheel', function(e){
+        let winH = $(window).height()
+        if (e.deltaY == -1) { 
+            if(scrollT > 0 && scrollT <= banner){
+                $('html,body').stop()
+                $('html,body').animate({
+                    "scrollTop": $('.banner').outerHeight()
+                }, 250 );
             }
         }
     })
+
+    $(window).on('scroll', function () {
+        scrollT = $(window).scrollTop()
+        banner = $('.banner').outerHeight()
+    });
     
 
     // ------------section_2-------------
