@@ -145,7 +145,7 @@ include "quote/template/head.php";
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <?php foreach ($img_data as $k => $v) { ?>
-                            <a href="javascript:;" target="_blank" class="list_swiper">
+                            <a href="<?php echo $v["i_url"]; ?>" target="_blank" class="list_swiper">
                                 <div class="swiper-slide porel">
                                     <img src="upload/<?php echo $v["i_img"]; ?>" />
                                     <div class="pic_title"><span><?php echo $v["i_title"]; ?></span></div>

@@ -30,6 +30,7 @@ include '../quote/head.php';
 		$id_name = "i_id";
 		$title_name = "i_title";
 		$img_name = "i_img";
+		$url_name = "i_url";
 		$order_name = "i_order";
 
 		$link = null;
@@ -44,6 +45,7 @@ include '../quote/head.php';
 		$group_array = array(
 			array("input", "標題", $title_name, "", "", ""),
 			array("img", "圖片", $img_name, "1", "560", "360"),
+			array("input", "連結", $url_name, "", "", ""),
 		);
 		$group_array = g_array($group_array, $data);
 		?>
