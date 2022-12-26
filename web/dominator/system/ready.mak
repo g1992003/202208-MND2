@@ -1,6 +1,6 @@
 <?php 
 	//ini_set('session.cookie_secure','off');
-	header("X-Frame-Options: SAMEORIGIN");
+	header("X-Frame-Options: DENY");
 	$project_title = "資通電軍";//專案名稱	
 	
 	/*

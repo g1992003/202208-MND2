@@ -4,11 +4,11 @@ include 'quote/include_data.php';
 
 $id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
 $id = html_decode($id);
-if (!is_numeric($id)) {
+$checkScript = (!is_numeric($id)) ? 1 : '';
+if ($checkScript) {
     header("location:./");
     exit();
 }
-
 $check = 10; //分頁數量
 $page_set = "?id=" . $id . "&p="; //頁碼
 $where = "WHERE n_status = 1 AND n_page = 3 AND dc_id = $id";

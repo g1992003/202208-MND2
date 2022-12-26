@@ -3,8 +3,9 @@ include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
 $id = html_decode($id);
-if (!isset($id) || !is_numeric($id)) {
-    header("location:./news.php");
+$checkScript = (!isset($id) || !is_numeric($id)) ? 1 : '';
+if ($checkScript) {
+    header("location:./");
     exit();
 }
 

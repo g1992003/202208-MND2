@@ -3,7 +3,8 @@ include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
 $id = html_decode($id);
-if (!isset($id) || !is_numeric($id)) {
+$checkScript = (!isset($id) || !is_numeric($id)) ? 1 : '';
+if ($checkScript) {
     header("location:./");
     exit();
 }
@@ -12,12 +13,15 @@ if (!isset($id) || !is_numeric($id)) {
 $query = "SELECT * FROM link WHERE l_id = $id";
 $data = sql_data($query, $link, 1);
 
-if ($data["l_page"] != 2 ||  $data["l_type"] != 2) {
+
+$checkScript = ($data["l_page"] != 2 ||  $data["l_type"] != 2)  ? 1 : '';
+if ($checkScript) {
     header("location:./");
     exit();
 }
 
-if ($data["l_page"] == 2 && $data["l_status"] == 0 && !isset($_SESSION["dominator_account"])) {
+$checkScript = ($data["l_page"] == 2 && $data["l_status"] == 0 && !isset($_SESSION["dominator_account"]))  ? 1 : '';
+if ($checkScript) {
     header("location:./");
     exit();
 }

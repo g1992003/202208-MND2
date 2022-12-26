@@ -3,8 +3,8 @@ include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
 $id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
-$id = html_decode($id);
-if (!is_numeric($id)) {
+$checkScript = (!is_numeric($id)) ? 1 : '';
+if ($checkScript) {
     header("location:./");
     exit();
 }
