@@ -5,24 +5,53 @@
 $(function () {   
 
     let scrollT = $(window).scrollTop()
-    let banner = $('.banner').outerHeight()
-
+    let banner = $('.banner').outerHeight() * 0.75
+    let section2 = $('.section_2').offset().top + ($('.section_2').outerHeight() * 0.75)
+    let scrollCan = true
     $(window).bind('mousewheel', function(e){
-        let winH = $(window).height()
-        if (e.deltaY == -1) { 
-            if(scrollT > 0 && scrollT <= banner){
-                $('html,body').stop()
-                $('html,body').animate({
-                    "scrollTop": $('.banner').outerHeight()
-                }, 250 );
+        scrollT = $(window).scrollTop()
+        if(scrollCan == true && e.deltaY == -1){
+            console.log('通過')
+            if (scrollT > 0 && scrollT <= banner) {
+                $('html,body').stop(true).animate({
+                    "scrollTop": $('.section_2').offset().top
+                }, 500 );
+                scrollCan = false
+                scrollCanVal()
+                console.log('通過第3層')
+            }else if (scrollT >= $('.banner').outerHeight() && scrollT <= section2) {
+                $('html,body').stop(true).animate({
+                    "scrollTop": $('.news').offset().top - $('header').outerHeight()
+                }, 500 );
+                scrollCan = false
+                scrollCanVal()
+                console.log('通過第4層')
             }
         }
+        // if (e.deltaY == -1 && scrollT > 0 && scrollT <= banner && scrollCan == true) {
+        //     scrollCan = false
+        //     $('html,body').stop(true).animate({
+        //         "scrollTop": $('.section_2').offset().top
+        //     }, 500 );
+        //     console.log("scrollCan1",scrollCan);
+        //     scrollCanVal()
+        // }
+        // if (e.deltaY == -1 && scrollT >= $('.banner').outerHeight() && scrollT <= section2 && scrollCan == true) {
+        //     scrollCan = false
+        //     $('html,body').stop(true).animate({
+        //         "scrollTop": $('.news').offset().top - $('header').outerHeight()
+        //     }, 500 );
+        //     console.log("scrollCan2",scrollCan);
+        //     scrollCanVal()
+        // }
     })
 
-    $(window).on('scroll', function () {
-        scrollT = $(window).scrollTop()
-        banner = $('.banner').outerHeight()
-    });
+    function scrollCanVal(){
+        setTimeout(() => {
+            scrollCan = true
+            console.log("scrollCan2",scrollCan);
+        }, "750")
+    }
     
 
     // ------------section_2-------------
