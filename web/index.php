@@ -144,14 +144,14 @@ include "quote/template/head.php";
                 </div>
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide porel">
-                            <?php foreach ($img_data as $k => $v) { ?>
+                        <?php foreach ($img_data as $k => $v) { ?>
+                            <div class="swiper-slide porel">
                                 <a href="<?php echo $v["i_url"]; ?>" target="_blank" class="list_swiper">
                                     <img src="upload/<?php echo $v["i_img"]; ?>" />
                                     <div class="pic_title"><span><?php echo $v["i_title"]; ?></span></div>
                                 </a>
-                            <?php } ?>
-                        </div>
+                            </div>
+                        <?php } ?>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
