@@ -9,7 +9,8 @@ $(function () {
     }
     
     $(".list_item").on('click', function (e, row, $element) {
-        parent.window.location = $(".list_item").data('href');
+        let newlink = $(".list_item").data('href');
+        window.open(newlink)
     });
     
     $('#newsList').DataTable({

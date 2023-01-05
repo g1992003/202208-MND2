@@ -157,7 +157,7 @@ include "quote/template/head.php";
                     <div class="swiper-button-prev"></div>
                 </div>
 
-                <a href="javascript:;" class="btn_more" target="_blank">
+                <a href="..\fhk\news.php" class="btn_more" target="_blank">
                     <span class="txt">MORE</span>
                     <span class="icon"></span>
                 </a>
