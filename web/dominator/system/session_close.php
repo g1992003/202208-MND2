@@ -6,6 +6,7 @@ include 'session.php'; //確認是否已登入
 $link->exec("INSERT INTO record (r_date,r_text,r_name,r_account,r_ip) VALUES(getdate(),'登出','" . $_SESSION["dominator_name"] . "','" . $_SESSION["dominator_account"] . "','" . $_SESSION["dominator_ip"] . "')"); //執行sql語法	
 $link = null;
 
+setcookie(session_name(), '', time() - 1, '/');
 if ($_SESSION["dominator_main"] == 3) {
     session_destroy(); //清空session
     header("location:../index.php"); //導回登入頁

@@ -68,6 +68,7 @@ if (@$check_result->rowCount() == 1) { //確認是否只有抓到一筆帳號紀
 
 			//開啟session暫存需要的資料
 			session_start();
+			session_regenerate_id();
 			$credentials = md5(date("Y") . $project_name . date("md"));
 			$_SESSION[$credentials] = true;
 			$_SESSION["dominator_id"] = $user_row->$id_set;

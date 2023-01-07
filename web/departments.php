@@ -4,13 +4,10 @@ include 'quote/include_data.php';
 
 $id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
 $id = html_decode($id);
-$checkScript = (!is_numeric($id)) ? 1 : '';
-if ($checkScript) {
-    header("location:./");
-    exit();
-}
+$id = preg_replace("/[^A-Za-z0-9 ]/", "", $id);
+
 //處室介紹
-$where = isset($_SESSION["dominator_account"]) ? "dc_id = $id" : "d_status = 1 AND dc_id = $id";
+$where = ($id_account != "") ? "dc_id = $id" : "d_status = 1 AND dc_id = $id";
 $query = "SELECT * FROM depart WHERE $where ORDER BY d_order";
 $data = sql_data($query, $link, 2, "d_id");
 
@@ -18,8 +15,6 @@ if ($data) {
     $first_data = reset($data);
     $no = (!isset($no) || !is_numeric($id)) ? $first_data["d_id"] : $no;
 }
-
-
 
 $link = null;
 $title_var =  "處室介紹 | " . $depart_title[$id]["dc_title"] . " | " . $title_var;

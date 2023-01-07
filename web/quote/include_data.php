@@ -1,33 +1,8 @@
 <?php
-header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
-header("X-Frame-Options: DENY");
-function start_session($expire = 0)
-{
-    if ($expire == 0) {
-        $expire = ini_get("session.gc_maxlifetime");
-    } else {
-        ini_set("session.gc_maxlifetime", $expire);
-    }
-    if (empty($_COOKIE['PHPSESSID'])) {
-        session_set_cookie_params($expire);
-        session_start([
-            'use_only_cookies' => 1,
-            'cookie_lifetime' => 0,
-            'cookie_secure' => 0,
-            'cookie_httponly' => 1
-        ]);
-    } else {
-        session_start([
-            'use_only_cookies' => 1,
-            'cookie_lifetime' => 0,
-            'cookie_secure' => 0,
-            'cookie_httponly' => 1
-        ]);
-        setcookie("PHPSESSID", session_id(), time() + $expire);
-    }
-}
 
-start_session(600);
+$id_account = !isset($_COOKIE["PHPSESSID"]) ? "" : $_COOKIE["PHPSESSID"];
+$id_account = preg_replace("/[^A-Za-z0-9 ]/", "", $id_account);
+
 $this_page = $url_set . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 //TITLE資訊

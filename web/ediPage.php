@@ -3,20 +3,17 @@ include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
 $first_arr = reset($about_title);
-
 $id = (!isset($id)) ?  $first_arr["a_id"] : $id;
 $id = html_decode($id);
-if (!is_numeric($id)) {
-    header("location:./");
-    exit();
-}
+$id = preg_replace("/[^A-Za-z0-9 ]/", "", $id);
+
 //關於本部
 $query = "SELECT * FROM about WHERE a_id = $id";
 $data = sql_data($query, $link, 1);
 
-$id = html_decode($data["a_status"]);
-if ($data["a_status"] == 0 && !isset($_SESSION["dominator_account"])) {
-    header("location:./");
+$data["a_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["a_status"]);
+if ($data["a_status"] == 0 && $id_account == "") {
+    echo "此文章不存在!";
     exit();
 }
 
