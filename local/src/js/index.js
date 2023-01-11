@@ -99,7 +99,7 @@ $(function () {
 
     // ------------Swiper------------
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3.3,
+        slidesPerView: 4.3,
         spaceBetween: 25,
         centeredSlides: true,
         loop: true,

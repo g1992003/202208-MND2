@@ -1255,7 +1255,7 @@ section i[class^=target] {
 }
 .life .swiper-slide {
   width: 400px;
-  aspect-ratio: 1/0.644;
+  aspect-ratio: 1/1.413;
 }
 .life .swiper-slide .list_swiper {
   position: relative;
