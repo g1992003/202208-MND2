@@ -3,26 +3,15 @@ include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
 $id = html_decode($id);
-$checkScript = (!isset($id) || !is_numeric($id)) ? 1 : '';
-if ($checkScript) {
-    header("location:./");
-    exit();
-}
+$id = preg_replace("/[^A-Za-z0-9 ]/", "", $id);
 
 //好站連結
 $query = "SELECT * FROM link WHERE l_id = $id";
 $data = sql_data($query, $link, 1);
 
-
-$checkScript = ($data["l_page"] != 2 ||  $data["l_type"] != 2)  ? 1 : '';
-if ($checkScript) {
-    header("location:./");
-    exit();
-}
-
-$checkScript = ($data["l_page"] == 2 && $data["l_status"] == 0 && !isset($_SESSION["dominator_account"]))  ? 1 : '';
-if ($checkScript) {
-    header("location:./");
+$data["l_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["l_status"]);
+if ($data["l_status"] == 0 && $id_account == "") {
+    echo "此文章不存在!";
     exit();
 }
 

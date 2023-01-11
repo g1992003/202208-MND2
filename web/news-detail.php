@@ -2,26 +2,15 @@
 include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
-$id = html_decode($id);
-$checkScript = (!isset($id) || !is_numeric($id)) ? 1 : '';
-if ($checkScript) {
-    header("location:./");
-    exit();
-}
-
 //內容
 $query = "SELECT n_id,n_page,n_status,n_title,n_text,n_file,n_tag,n_unit,n_name,
             convert(varchar, n_date, 111) AS n_date
         FROM news WHERE n_id = $id";
 $data = sql_data($query, $link, 1);
 
-if ($data["n_page"] != 1) {
-    header("location:./news.php");
-    exit();
-}
-
-if ($data["n_status"] == 0 && !isset($_SESSION["dominator_account"])) {
-    header("location:./news.php");
+$data["n_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["n_status"]);
+if ($data["n_status"] == 0  && $id_account == "") {
+    echo "此文章不存在!";
     exit();
 }
 

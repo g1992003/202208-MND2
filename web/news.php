@@ -3,11 +3,8 @@ include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
 $id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
-$checkScript = (!is_numeric($id)) ? 1 : '';
-if ($checkScript) {
-    header("location:./");
-    exit();
-}
+$id = html_decode($id);
+$id = preg_replace("/[^A-Za-z0-9 ]/", "", $id);
 
 $check = 5; //分頁數量
 $page_set = "?id=" . $id . "&p="; //頁碼
