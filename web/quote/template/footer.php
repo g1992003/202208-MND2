@@ -48,7 +48,7 @@
             <ul>
                 <?php foreach ($sys_link_title as $k => $v) { ?>
                     <li>
-                        <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank"' : 'href="edi_system.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
+                        <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
                     </li>
                 <?php } ?>
                 <li>
@@ -64,7 +64,7 @@
             <ul>
                 <?php foreach ($link_title as $k => $v) { ?>
                     <li>
-                        <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank"' : 'href="edi_link.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
+                        <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_link.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
                     </li>
                 <?php } ?>
             </ul>
@@ -74,6 +74,6 @@
         <div><?php echo $meta_data[21]["d_text"]; ?></div>
         <div><a href="mailto:<?php echo $meta_data[25]["d_text"]; ?>"><?php echo $meta_data[25]["d_text"]; ?></a></div>
         <div><a href="tel:<?php echo $meta_data[24]["d_text"]; ?>"><?php echo $meta_data[24]["d_text"]; ?></a></div>
-        <div><a href="<?php echo $meta_data[23]["d_text"]; ?>" target="blank"><?php echo $meta_data[22]["d_text"]; ?></a></div>
+        <div><a href="<?php echo $meta_data[23]["d_text"]; ?>" target="_blank" rel="nofollow"><?php echo $meta_data[22]["d_text"]; ?></a></div>
     </div>
 </footer>

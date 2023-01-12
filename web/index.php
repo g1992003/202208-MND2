@@ -100,36 +100,7 @@ include "quote/template/head.php";
                     </div>
                 </div>
             </div>
-            <div class="container" id="list-temp">
-                <!-- <ul class="list_news">
-                    <li>
-                        <a href="news-detail.html">
-                            <div>
-                                <div class="day">
-                                    <p>2022</p>
-                                    <p>10/05</p>
-                                </div>
-                                <div class="tag">
-                                    消息分類
-                                </div>
-                            </div>
-                            <div>
-                                <div class="txt">
-                                    <div class="title">
-                                        文字標題文字標題文字標題文字標題文字標題文字標題文字標題文字標題文字標題文字標題文字標題文字標題文字標題文字標題
-                                    </div>
-                                    <div class="name">
-                                        發布人員
-                                    </div>
-                                </div>
-                                <div class="intro">
-                                    內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul> -->
-            </div>
+            <div class="container" id="list-temp"></div>
             <a href="news.php" class="btn_more">
                 <span class="txt">MORE</span>
                 <span class="icon"></span>
@@ -146,7 +117,7 @@ include "quote/template/head.php";
                     <div class="swiper-wrapper">
                         <?php foreach ($img_data as $k => $v) { ?>
                             <div class="swiper-slide porel">
-                                <a href="<?php echo $v["i_url"]; ?>" target="_blank" class="list_swiper">
+                                <a href="<?php echo $v["i_url"]; ?>" target="_blank" rel="nofollow" class="list_swiper">
                                     <img src="upload/<?php echo $v["i_img"]; ?>" />
                                     <div class="pic_title"><span><?php echo $v["i_title"]; ?></span></div>
                                 </a>
@@ -157,7 +128,7 @@ include "quote/template/head.php";
                     <div class="swiper-button-prev"></div>
                 </div>
 
-                <a href="javascript:;" class="btn_more" target="_blank">
+                <a href="javascript:;" class="btn_more" target="_blank" rel="nofollow">
                     <span class="txt">MORE</span>
                     <span class="icon"></span>
                 </a>

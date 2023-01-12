@@ -49,7 +49,7 @@ include "quote/template/head.php";
                 </div>
             </div>
             <?php if ($data["n_file"] != "") { ?>
-                <a href="upload/<?php echo $data["n_file"]; ?>" target="_blank" class="download">檔案下載<i></i></a>
+                <a href="upload/<?php echo $data["n_file"]; ?>" target="_blank" rel="nofollow" class="download">檔案下載<i></i></a>
             <?php } ?>
             <a href="javascript:history.back(-1)" class="btn_back">
                 <span class="txt">返回</span>

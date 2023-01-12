@@ -58,7 +58,7 @@
                     <ul>
                         <?php foreach ($sys_link_title as $k => $v) { ?>
                             <li>
-                                <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank"' : 'href="edi_system.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
+                                <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
                             </li>
                         <?php } ?>
                         <li>
@@ -76,7 +76,7 @@
                     <ul>
                         <?php foreach ($link_title as $k => $v) { ?>
                             <li>
-                                <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank"' : 'href="edi_link.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
+                                <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_link.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
                             </li>
                         <?php } ?>
                     </ul>
