@@ -1,5 +1,7 @@
 <?php
 
+header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
+
 $id_account = !isset($_COOKIE["PHPSESSID"]) ? "" : $_COOKIE["PHPSESSID"];
 $id_account = preg_replace("/[^A-Za-z0-9 ]/", "", $id_account);
 
