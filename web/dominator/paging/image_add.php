@@ -44,7 +44,7 @@ include '../quote/head.php';
 		// 6、img：高度 	/ 	textarea：無HTML編輯器時，為textarea行數
 		$group_array = array(
 			array("input", "標題", $title_name, "", "", ""),
-			array("img", "圖片", $img_name, "1", "560", "360"),
+			array("img", "圖片", $img_name, "1", "424", "600"),
 			array("input", "連結", $url_name, "", "", ""),
 		);
 		$group_array = g_array($group_array, $data);
