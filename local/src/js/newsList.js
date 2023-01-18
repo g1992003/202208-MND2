@@ -9,7 +9,7 @@ $(function () {
     }
     
     $(".list_item").on('click', function (e, row, $element) {
-        let newlink = $(".list_item").data('href');
+        let newlink = $(this).data('href');
         window.open(newlink)
     });
     
