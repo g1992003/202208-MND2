@@ -22,21 +22,13 @@
                         <span>直屬單位</span>
                     </div>
                     <ul>
-                        <li>
-                            <a href="javascript:;">網路戰聯隊</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">資訊通信聯隊</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">電子戰中心</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">訓測中心</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">招募專區</a>
-                        </li>
+                        <?php foreach ($article_data as $k => $v) { ?>
+                            <li>
+                                <a href="javascript:;">
+                                    <?php echo $v["a_title"]; ?>
+                                </a>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </li>
                 <li>
