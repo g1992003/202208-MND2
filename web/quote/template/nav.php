@@ -117,7 +117,7 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
                     </ul>
                 </li>
                 <?php if(!empty($_SESSION["front_account"])){ ?>
-                <li>
+                <li class="logInShow">
                     <div class="menu-list">
                         <span>系統連結</span>
                     </div>

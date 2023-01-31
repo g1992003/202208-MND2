@@ -148,6 +148,12 @@ header{
         }
     }
 }
+.logOut .menu > li.logInShow{
+    display: block;
+}
+.logIn .menu > li.logInShow{
+    display: none;
+}
 .logIn{
     .menu{
         >li{
@@ -176,11 +182,8 @@ header{
                 transform: translateY(-100%);
                 transition: all 0.5s 0.14s;
                 background: url('../images/a3.jpg') center / cover no-repeat;
-            }            
+            }    
             &:nth-child(4){
-                display: none;
-            }
-            &:nth-child(5){
                 transform: translateY(-100%);
                 transition: all 0.5s 0.28s;
                 background: url('../images/a5.jpg') center / cover no-repeat;

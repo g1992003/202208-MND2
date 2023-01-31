@@ -43,7 +43,7 @@
                         <?php } ?>
                     </ul>
                 </li>
-                <li>
+                <li class="logInShow">
                     <div class="menu-list">
                         <span>系統連結</span>
                     </div>

@@ -36,7 +36,7 @@
             </ul>
         </li>
         <?php if(!empty($_SESSION["front_account"])){ ?>
-        <li>
+        <li class="logInShow">
             <span>系統連結</span>
             <ul>
                 <?php foreach ($sys_link_title as $k => $v) { ?>
