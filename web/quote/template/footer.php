@@ -35,6 +35,7 @@
                 <?php } ?>
             </ul>
         </li>
+        <?php if(!empty($_SESSION["front_account"])){ ?>
         <li>
             <span>系統連結</span>
             <ul>
@@ -51,6 +52,7 @@
                 </li>
             </ul>
         </li>
+        <?php } ?>
         <li>
             <span>好站連結</span>
             <ul>

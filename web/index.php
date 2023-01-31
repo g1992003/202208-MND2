@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
@@ -24,7 +25,7 @@ include "quote/template/head.php";
 <link rel="stylesheet" href="dist/css/index.css" />
 </head>
 
-<body class="lang_tw logOut">
+<body class="lang_tw <?=empty($_SESSION["front_account"]) ? 'logIn' : 'logOut'?>">
     <?php
     include "quote/template/nav.php";
     ?>
