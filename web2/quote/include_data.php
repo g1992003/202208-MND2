@@ -29,3 +29,7 @@ $sys_link_title = sql_data($query, $link, 2, "l_id");
 //好站連結
 $query = "SELECT l_id,l_title,l_url,l_type FROM link WHERE l_page = 2 AND l_status = 1 ORDER BY l_order";
 $link_title = sql_data($query, $link, 2, "l_id");
+
+//直屬單位
+$query = "SELECT * FROM about WHERE a_id IN (1,2,3,4,5)";
+$article_data = sql_data($query, $link);

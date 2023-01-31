@@ -11,58 +11,39 @@ $(function () {
     $(window).bind('mousewheel', function(e){
         scrollT = $(window).scrollTop()
         if(scrollCan == true && e.deltaY == -1){
-            console.log('通過')
             if (scrollT > 0 && scrollT <= banner) {
                 $('html,body').stop(true).animate({
                     "scrollTop": $('.section_2').offset().top
                 }, 500 );
                 scrollCan = false
                 scrollCanVal()
-                console.log('通過第3層')
             }else if (scrollT >= $('.banner').outerHeight() && scrollT <= section2) {
                 $('html,body').stop(true).animate({
                     "scrollTop": $('.news').offset().top - $('header').outerHeight()
                 }, 500 );
                 scrollCan = false
                 scrollCanVal()
-                console.log('通過第4層')
             }
         }
-        // if (e.deltaY == -1 && scrollT > 0 && scrollT <= banner && scrollCan == true) {
-        //     scrollCan = false
-        //     $('html,body').stop(true).animate({
-        //         "scrollTop": $('.section_2').offset().top
-        //     }, 500 );
-        //     console.log("scrollCan1",scrollCan);
-        //     scrollCanVal()
-        // }
-        // if (e.deltaY == -1 && scrollT >= $('.banner').outerHeight() && scrollT <= section2 && scrollCan == true) {
-        //     scrollCan = false
-        //     $('html,body').stop(true).animate({
-        //         "scrollTop": $('.news').offset().top - $('header').outerHeight()
-        //     }, 500 );
-        //     console.log("scrollCan2",scrollCan);
-        //     scrollCanVal()
-        // }
     })
 
     function scrollCanVal(){
         setTimeout(() => {
             scrollCan = true
-            console.log("scrollCan2",scrollCan);
         }, "750")
     }
     
+    
 
     // ------------section_2-------------
-    $('.main_box li').on('click', function () {
-        if ($(this).hasClass('active')) {
+    $('.main_box li a').on('click', function () {
+        if ($(this).parent().hasClass('active')) {
             $('.main_box li').removeClass('active')
             $('.main_box li').removeClass('out')
         } else {
-            $(this).addClass('active')
-            $(this).siblings().removeClass('active')
-            $(this).siblings().addClass('out')
+            $(this).parent().addClass('active')
+            $(this).parent().siblings().removeClass('active')
+            $(this).parent().siblings().addClass('out')
         }
     })
 

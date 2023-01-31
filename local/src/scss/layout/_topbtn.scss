@@ -12,7 +12,7 @@
     border-radius: 50%;
     background: #fff;
     border: 1px solid $primary-color;
-    // opacity: 0;
+    opacity: 0;
     transition: opacity 0.75s ease;
     &.show {
         opacity: 1;

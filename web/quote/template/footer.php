@@ -18,7 +18,7 @@
             <ul>
                 <?php foreach ($article_data as $k => $v) { ?>
                     <li>
-                        <a href="javascript:;">
+                        <a href="./?active=<?php echo $k-1 ?>">
                             <?php echo $v["a_title"]; ?>
                         </a>
                     </li>

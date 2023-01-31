@@ -6,10 +6,6 @@ include 'quote/include_data.php';
 $query = "SELECT * FROM document WHERE d_id IN (26,27)";
 $banner = sql_data($query, $link, 2, "d_id");
 
-//直屬單位
-$query = "SELECT * FROM about WHERE a_id IN (1,2,3,4,5)";
-$article_data = sql_data($query, $link);
-
 //處室
 $query = "SELECT d_class.dc_id,dc_title FROM d_class INNER JOIN news ON d_class.dc_id = news.dc_id WHERE n_status = 1 AND n_page = 1 ORDER BY dc_order";
 $depart_data = sql_data($query, $link, 2, "dc_id");
@@ -36,6 +32,12 @@ include "quote/template/head.php";
                         <source type="video/mp4" src="upload/<?php echo $banner[27]["d_text"]; ?>">
                         </source>
                     </video>
+                    <div class="text_box">
+                        <div href="javascript:;" class="scroll-animate">
+                            <div class="arrow_1"><img src="dist/images/1.png" alt=""></div>
+                            <div class="arrow_2"><img src="dist/images/1.png" alt=""></div>
+                        </div>
+                    </div>
                 </div>
             <?php } else { ?>
                 <div class="img">
