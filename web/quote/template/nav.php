@@ -97,7 +97,9 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
                     <ul>
                         <?php foreach ($article_data as $k => $v) { ?>
                             <li>
-                                <a href="ediPage.php?id=<?php echo $k; ?>"><?php echo $v["a_title"]; ?></a>
+                                <a href="./?active=<?php echo $k-1 ?>">
+                                    <?php echo $v["a_title"]; ?>
+                                </a>
                             </li>
                         <?php } ?>
                     </ul>
