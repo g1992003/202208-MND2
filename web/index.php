@@ -33,12 +33,6 @@ include "quote/template/head.php";
                         <source type="video/mp4" src="upload/<?php echo $banner[27]["d_text"]; ?>">
                         </source>
                     </video>
-                    <div class="text_box">
-                        <div href="javascript:;" class="scroll-animate">
-                            <div class="arrow_1"><img src="dist/images/1.png" alt=""></div>
-                            <div class="arrow_2"><img src="dist/images/1.png" alt=""></div>
-                        </div>
-                    </div>
                 </div>
             <?php } else { ?>
                 <div class="img">

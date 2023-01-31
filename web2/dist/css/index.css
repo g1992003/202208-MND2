@@ -870,7 +870,7 @@ section i[class^=target] {
   position: absolute;
   top: 187px;
   left: 0;
-  padding: 0 3% 0 9.2%;
+  padding: 0.4em 3% 0 9.2%;
   font-size: 36px;
   font-weight: 700;
   color: #fff;
