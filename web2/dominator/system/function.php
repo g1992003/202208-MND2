@@ -16,7 +16,7 @@ function db_conn($project_name)
 
 	//連結資料庫後告知編碼
 	try {
-		$link = new PDO("mysql:host=192.168.0.183;dbname=$project_name;charset=UTF8", $user, $password);
+		$link = new PDO("mysql:host=192.168.0.196;dbname=$project_name;charset=UTF8", $user, $password);
 		$link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$link->setAttribute(PDO::SQLSRV_ATTR_QUERY_TIMEOUT, 1);
 	} catch (PDOException $e) {
