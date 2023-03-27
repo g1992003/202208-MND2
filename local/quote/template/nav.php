@@ -106,7 +106,7 @@
                         <a href="javascript:;">電子作戰中心</a>
                     </li>
                     <li>
-                        <a href="javascript:;">測訓發展中心        </a>
+                        <a href="javascript:;">測訓發展中心</a>
                     </li>
                 </ul>
             </li>

@@ -2060,70 +2060,70 @@ GO
 INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2425', N'2022-11-14 17:08:48.110', N'登入', N'mnd_admin', N'【政戰園地】管理者', N'192.168.0.87')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2426', N'2022-11-14 17:16:17.493', N'登入', N'Test1', N'測試2', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2426', N'2022-11-14 17:16:17.493', N'登入', N'Test1', N'測試2', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2427', N'2022-11-14 17:16:21.047', N'登出', N'Test1', N'測試2', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2427', N'2022-11-14 17:16:21.047', N'登出', N'Test1', N'測試2', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2428', N'2022-11-14 17:16:51.820', N'登入', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2428', N'2022-11-14 17:16:51.820', N'登入', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2429', N'2022-11-14 17:18:49.803', N'user 資料修改：3', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2429', N'2022-11-14 17:18:49.803', N'user 資料修改：3', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2430', N'2022-11-14 17:21:16.717', N'news 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2430', N'2022-11-14 17:21:16.717', N'news 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2431', N'2022-11-14 17:21:21.407', N'news 資料刪除：17', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2431', N'2022-11-14 17:21:21.407', N'news 資料刪除：17', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2432', N'2022-11-14 17:26:29.253', N'news 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2432', N'2022-11-14 17:26:29.253', N'news 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2433', N'2022-11-14 17:26:34.393', N'news 資料刪除：18', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2433', N'2022-11-14 17:26:34.393', N'news 資料刪除：18', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2434', N'2022-11-14 17:26:53.370', N'news 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2434', N'2022-11-14 17:26:53.370', N'news 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2435', N'2022-11-14 17:26:57.247', N'news 資料刪除：19', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2435', N'2022-11-14 17:26:57.247', N'news 資料刪除：19', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2436', N'2022-11-14 17:28:24.790', N'news 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2436', N'2022-11-14 17:28:24.790', N'news 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2437', N'2022-11-14 17:28:28.183', N'news 資料刪除：20', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2437', N'2022-11-14 17:28:28.183', N'news 資料刪除：20', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2438', N'2022-11-14 17:29:53.457', N'user 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2438', N'2022-11-14 17:29:53.457', N'user 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2439', N'2022-11-14 17:29:57.993', N'user 資料刪除：5', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2439', N'2022-11-14 17:29:57.993', N'user 資料刪除：5', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2440', N'2022-11-14 17:30:15.167', N'photo 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2440', N'2022-11-14 17:30:15.167', N'photo 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2441', N'2022-11-14 17:31:14.673', N'photo 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2441', N'2022-11-14 17:31:14.673', N'photo 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2442', N'2022-11-14 17:31:18.860', N'photo 資料刪除：31', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2442', N'2022-11-14 17:31:18.860', N'photo 資料刪除：31', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2443', N'2022-11-14 17:31:33.193', N'video 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2443', N'2022-11-14 17:31:33.193', N'video 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2444', N'2022-11-14 17:31:38.020', N'video 資料刪除：1040', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2444', N'2022-11-14 17:31:38.020', N'video 資料刪除：1040', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2445', N'2022-11-14 17:31:49.247', N'user 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2445', N'2022-11-14 17:31:49.247', N'user 資料新增', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2446', N'2022-11-14 17:31:56.483', N'user 資料修改：6', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2446', N'2022-11-14 17:31:56.483', N'user 資料修改：6', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
-INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2447', N'2022-11-14 17:32:00.670', N'user 資料刪除：6', N'MAK_supervisor', N'源做總管理者', N'192.168.0.183')
+INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2447', N'2022-11-14 17:32:00.670', N'user 資料刪除：6', N'MAK_supervisor', N'源做總管理者', N'192.168.0.196')
 GO
 GO
 INSERT INTO [dbo].[record] ([r_id], [r_date], [r_text], [r_account], [r_name], [r_ip]) VALUES (N'2448', N'2022-11-16 08:32:56.957', N'登入', N'MAK_supervisor', N'源做總管理者', N'::1')

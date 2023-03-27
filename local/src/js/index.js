@@ -47,18 +47,18 @@ $(function () {
         }
     })
 
-    $('.units ul li').on('click', function(){
-        $('body').removeClass('openMenu');
-        $('.menu-ham').removeClass('hamActive');
-        $('html,body').stop(true).animate({
-            scrollTop: $('.section_2').offset().top
-        }, 750);
-        let idx = $(this).index()
-        $('.section_2 .main_box li').addClass('out')
-        $('.section_2 .main_box li').removeClass('active')
-        $('.section_2 .main_box li').eq(idx).removeClass('out')
-        $('.section_2 .main_box li').eq(idx).addClass('active')
-    })
+    // $('.units ul li').on('click', function(){
+    //     $('body').removeClass('openMenu');
+    //     $('.menu-ham').removeClass('hamActive');
+    //     $('html,body').stop(true).animate({
+    //         scrollTop: $('.section_2').offset().top
+    //     }, 750);
+    //     let idx = $(this).index()
+    //     $('.section_2 .main_box li').addClass('out')
+    //     $('.section_2 .main_box li').removeClass('active')
+    //     $('.section_2 .main_box li').eq(idx).removeClass('out')
+    //     $('.section_2 .main_box li').eq(idx).addClass('active')
+    // })
 
     var url = location.href;
     if(url.indexOf('?')!=-1){

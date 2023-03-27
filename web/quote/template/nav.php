@@ -122,17 +122,17 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
                         <span>系統連結</span>
                     </div>
                     <ul>
-                        <?php foreach ($sys_link_title as $k => $v) { ?>
-                            <li>
-                                <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
-                            </li>
-                        <?php } ?>
                         <li>
                             <a href="regulation.php">行政規則</a>
                         </li>
                         <li>
                             <a href="policy.php">一令到位</a>
                         </li>
+                        <?php foreach ($sys_link_title as $k => $v) { ?>
+                            <li>
+                                <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </li>
                 <?php } ?>
