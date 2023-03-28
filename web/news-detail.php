@@ -2,17 +2,21 @@
 include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
+if (!isset($id) || !is_numeric($id)) {
+    to_exit:
+    include("error404.html");
+    exit();
+}
+
 //內容
 $query = "SELECT n_id,n_page,n_status,n_title,n_text,n_file,n_tag,n_unit,n_name,
             convert(varchar, n_date, 111) AS n_date
         FROM news WHERE n_id = $id";
 $data = sql_data($query, $link, 1);
+if (!$data) goto to_exit;
 
-$data["n_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["n_status"]);
-if ($data["n_status"] == 0  && $id_account == "") {
-    echo "此文章不存在!";
-    exit();
-}
+$data["n_status"] = preg_replace("/[^0-9 ]/", "", $data["n_status"]);
+if ($data["n_status"] == 0  && $id_account == "")  goto to_exit;
 
 $link = null;
 $title_var =  "最新消息 | " . $data["n_title"] . " | " . $title_var;
@@ -22,7 +26,7 @@ include "quote/template/head.php";
 <link rel="stylesheet" href="dist/css/page.css" />
 </head>
 
-<body class="lang_tw <?=empty($_SESSION["front_account"]) ? 'logIn' : 'logOut'?>">
+<body class="lang_tw <?= empty($_SESSION["front_account"]) ? 'logIn' : 'logOut' ?>">
     <?php
     include "quote/template/nav.php";
     ?>

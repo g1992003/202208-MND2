@@ -4,7 +4,8 @@ include 'quote/include_data.php';
 
 $id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
 $id = html_decode($id);
-$id = preg_replace("/[^A-Za-z0-9 ]/", "", $id);
+$id = preg_replace("/[^0-9 ]/", "", $id);
+$id = ($id == "") ?  $first_depart["dc_id"] : $id;
 
 $check = 10; //分頁數量
 $page_set = "?id=" . $id . "&p="; //頁碼
@@ -30,8 +31,13 @@ $query = "SELECT n_id,n_title,n_name,n_unit,n_tag,n_file,
             convert(varchar(4), n_date, 111) AS n_year,
             convert(varchar(5), n_date, 101) AS n_date
         FROM news $where ORDER BY n_order";
-// offset {$start} rows fetch next {$check} rows only
 $data = sql_data($query, $link, 2, "n_id");
+
+if (!$data && !isset($depart_title[$id])) {
+    include("error404.html");
+    exit();
+}
+
 
 $link = null;
 
@@ -42,7 +48,7 @@ include "quote/template/head.php";
 <link rel="stylesheet" href="dist/css/page.css" />
 </head>
 
-<body class="lang_tw <?=empty($_SESSION["front_account"]) ? 'logIn' : 'logOut'?>">
+<body class="lang_tw <?= empty($_SESSION["front_account"]) ? 'logIn' : 'logOut' ?>">
     <?php
     include "quote/template/nav.php";
     ?>

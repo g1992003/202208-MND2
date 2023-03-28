@@ -4,7 +4,8 @@ include 'quote/include_data.php';
 
 $id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
 $id = html_decode($id);
-$id = preg_replace("/[^A-Za-z0-9 ]/", "", $id);
+$id = preg_replace("/[^0-9]/", "", $id);
+$id = ($id == "") ?  $first_depart["dc_id"] : $id;
 
 $check = 5; //分頁數量
 $page_set = "?id=" . $id . "&p="; //頁碼
@@ -12,7 +13,9 @@ $where = "WHERE n_status = 1 AND n_page = 1 AND dc_id = $id";
 
 //分頁設定開始
 $query = "SELECT COUNT(n_id) FROM news $where";
+
 if (!isset($p) || !is_numeric($p) || $p < 1) $p = 1;
+
 $result = $link->prepare($query);
 $result->execute();
 $r = $result->fetchColumn();
@@ -20,9 +23,9 @@ $total = $r;
 $maxPage = $total > 0 ? ceil($total / $check) : 1;
 $p = $p > $maxPage ? 1 : $p;
 $start = ($p - 1) * $check;
-
 $end_page = $p + 2 <= $maxPage ? $p + 2 : $maxPage;
 $start_page = $end_page - 4 >= 1 ? $end_page - 4 : 1;
+
 if ($end_page - $start_page < 4) $end_page = $start_page + 4 <= $maxPage ? $start_page + 4 : $maxPage;
 
 //一令到位
@@ -30,7 +33,13 @@ $query = "SELECT n_id,n_title,n_name,n_unit,n_tag,n_text,
             convert(varchar(4), n_date, 111) AS n_year,
             convert(varchar(5), n_date, 101) AS n_date
         FROM news $where ORDER BY n_order offset {$start} rows fetch next {$check} rows only";
+
 $data = sql_data($query, $link, 2, "n_id");
+
+if (!$data && !isset($depart_title[$id])) {
+    include("error404.html");
+    exit();
+}
 
 $link = null;
 $title_var =  "最新消息 | " . $depart_title[$id]["dc_title"] . ' | ' . $title_var;
@@ -40,7 +49,7 @@ include "quote/template/head.php";
 <link rel="stylesheet" href="dist/css/page.css" />
 </head>
 
-<body class="lang_tw <?=empty($_SESSION["front_account"]) ? 'logIn' : 'logOut'?>">
+<body class="lang_tw <?= empty($_SESSION["front_account"]) ? 'logIn' : 'logOut' ?>">
     <?php
     include "quote/template/nav.php";
     ?>

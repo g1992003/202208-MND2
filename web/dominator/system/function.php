@@ -1,6 +1,6 @@
 <?php
 /*
- 【建立資料庫連結】
+【建立資料庫連結】
 	使用前需設定資料庫連線內容
 
 TRUE：回傳陣列。
@@ -20,7 +20,8 @@ function db_conn($project_name)
 		$link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$link->setAttribute(PDO::SQLSRV_ATTR_QUERY_TIMEOUT, 1);
 	} catch (PDOException $e) {
-		echo $e->getMessage();
+		include("errorDB.html");
+		exit();
 	}
 
 	return $link;

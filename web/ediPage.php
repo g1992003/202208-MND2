@@ -5,17 +5,21 @@ include 'quote/include_data.php';
 $first_arr = reset($about_title);
 $id = (!isset($id)) ?  $first_arr["a_id"] : $id;
 $id = html_decode($id);
-$id = preg_replace("/[^A-Za-z0-9 ]/", "", $id);
+$id = preg_replace("/[^0-9 ]/", "", $id);
+$id = ($id == "") ?  $first_arr["a_id"] : $id;
 
 //關於本部
 $query = "SELECT * FROM about WHERE a_id = $id";
 $data = sql_data($query, $link, 1);
 
-$data["a_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["a_status"]);
-if ($data["a_status"] == 0 && $id_account == "") {
-    echo "此文章不存在!";
+if (!$data) {
+    to_exit:
+    include("error404.html");
     exit();
 }
+
+$data["a_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["a_status"]);
+if ($data["a_status"] == 0 && $id_account == "") goto to_exit;
 
 $link = null;
 $title_var = $data["a_title"] . " | " . $title_var;
@@ -25,7 +29,7 @@ include "quote/template/head.php";
 <link rel="stylesheet" href="dist/css/page.css" />
 </head>
 
-<body class="lang_tw <?=empty($_SESSION["front_account"]) ? 'logIn' : 'logOut'?>">
+<body class="lang_tw <?= empty($_SESSION["front_account"]) ? 'logIn' : 'logOut' ?>">
     <?php
     include "quote/template/nav.php";
     ?>

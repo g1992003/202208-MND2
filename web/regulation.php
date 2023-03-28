@@ -4,7 +4,8 @@ include 'quote/include_data.php';
 
 $id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
 $id = html_decode($id);
-$id = preg_replace("/[^A-Za-z0-9 ]/", "", $id);
+$id = preg_replace("/[^0-9 ]/", "", $id);
+$id = ($id == "") ?  $first_depart["dc_id"] : $id;
 
 $check = 10; //分頁數量
 $page_set = "?id=" . $id . "&p="; //頁碼
@@ -40,7 +41,7 @@ include "quote/template/head.php";
 <link rel="stylesheet" href="dist/css/page.css" />
 </head>
 
-<body class="lang_tw <?=empty($_SESSION["front_account"]) ? 'logIn' : 'logOut'?>">
+<body class="lang_tw <?= empty($_SESSION["front_account"]) ? 'logIn' : 'logOut' ?>">
     <?php
     include "quote/template/nav.php";
     ?>

@@ -2,18 +2,19 @@
 include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
-$id = html_decode($id);
-$id = preg_replace("/[^A-Za-z0-9 ]/", "", $id);
+if (!isset($id) || !is_numeric($id)) {
+    to_exit:
+    include("error404.html");
+    exit();
+}
 
 //好站連結
 $query = "SELECT * FROM link WHERE l_id = $id";
 $data = sql_data($query, $link, 1);
+if (!$data) goto to_exit;
 
 $data["l_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["l_status"]);
-if ($data["l_status"] == 0 && $id_account == "") {
-    echo "此文章不存在!";
-    exit();
-}
+if ($data["l_status"] == 0 && $id_account == "") goto to_exit;
 
 $link = null;
 $title_var = $data["l_title"] . " | " . $title_var;
@@ -23,7 +24,7 @@ include "quote/template/head.php";
 <link rel="stylesheet" href="dist/css/page.css" />
 </head>
 
-<body class="lang_tw <?=empty($_SESSION["front_account"]) ? 'logIn' : 'logOut'?>">
+<body class="lang_tw <?= empty($_SESSION["front_account"]) ? 'logIn' : 'logOut' ?>">
     <?php
     include "quote/template/nav.php";
     ?>

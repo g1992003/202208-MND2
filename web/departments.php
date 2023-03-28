@@ -4,13 +4,18 @@ include 'quote/include_data.php';
 
 $id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
 $id = html_decode($id);
-$id = preg_replace("/[^A-Za-z0-9 ]/", "", $id);
+$id = preg_replace("/[^0-9 ]/", "", $id);
+$id = ($id == "") ?  $first_depart["dc_id"] : $id;
 
 //處室介紹
 $where = ($id_account != "") ? "dc_id = $id" : "d_status = 1 AND dc_id = $id";
 $query = "SELECT * FROM depart WHERE $where ORDER BY d_order";
 $data = sql_data($query, $link, 2, "d_id");
 
+if (!$data && !isset($depart_title[$id])) {
+    include("error404.html");
+    exit();
+}
 if ($data) {
     $first_data = reset($data);
     $no = (!isset($no) || !is_numeric($id)) ? $first_data["d_id"] : $no;
@@ -24,7 +29,7 @@ include "quote/template/head.php";
 <link rel="stylesheet" href="dist/css/page.css" />
 </head>
 
-<body class="lang_tw <?=empty($_SESSION["front_account"]) ? 'logIn' : 'logOut'?>">
+<body class="lang_tw <?= empty($_SESSION["front_account"]) ? 'logIn' : 'logOut' ?>">
     <?php
     include "quote/template/nav.php";
     ?>
