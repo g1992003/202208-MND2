@@ -20,7 +20,7 @@ function db_conn($project_name)
 		$link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$link->setAttribute(PDO::SQLSRV_ATTR_QUERY_TIMEOUT, 1);
 	} catch (PDOException $e) {
-		include("errorDB.html");
+		header('Location:errorDB.html');
 		exit();
 	}
 
