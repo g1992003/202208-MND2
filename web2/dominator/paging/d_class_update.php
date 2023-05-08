@@ -35,6 +35,7 @@ include '../quote/head.php';
 		$db_name = "d_class";
 		$id_name = "dc_id";
 		$title_name = "dc_title";
+		$title_name_2 = "dc_title_2";
 		$order_name = "dc_order";
 
 
@@ -57,7 +58,8 @@ include '../quote/head.php';
 		// 5、img：寬度 	/ 	textarea：HTML編輯器開關，0 or 1 	/ 	select：陣列如為二維，請加第二維key值	 / 	input：限數字值為1
 		// 6、img：高度 	/ 	textarea：無HTML編輯器時，為textarea行數
 		$group_array = array(
-			array("input", "標題", $title_name, "", "", ""),
+			array("input", "標題《中文》", $title_name, "", "", ""),
+			array("input", "標題《英文》", $title_name_2, "", "", ""),
 			array("input", "使用者名稱", $name_name, "", "", ""),
 			array("input", "帳號", $account_name, "", "", ""),
 		);

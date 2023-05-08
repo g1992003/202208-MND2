@@ -30,6 +30,7 @@ include '../quote/head.php';
 		$db_name = "link";
 		$id_name = "l_id";
 		$title_name = "l_title";
+		$title_name_2 = "l_title_2";
 		$type_name = "l_type";
 		$text_name = "l_text";
 		$url_name = "l_url";

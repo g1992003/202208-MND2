@@ -26,6 +26,7 @@ include '../quote/head.php';
 		$db_name = "d_class";
 		$id_name = "dc_id";
 		$title_name = "dc_title";
+		$title_name_2 = "dc_title_2";
 		$order_name = "dc_order";
 
 		//管理者資料
