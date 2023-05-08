@@ -32,6 +32,7 @@ include '../quote/head.php';
 		$db_name = "link";
 		$id_name = "l_id";
 		$title_name = "l_title";
+		$title_name_2 = "l_title_2";
 		$type_name = "l_type";
 		$text_name = "l_text";
 		$url_name = "l_url";
@@ -52,7 +53,8 @@ include '../quote/head.php';
 		// 6、img：高度 	/ 	textarea：無HTML編輯器時，為textarea行數
 		$group_array = array(
 			array("select", "文章類型", $type_name, $type_data, "", ""),
-			array("input", "標題", $title_name, "", "", ""),
+			array("input", "標題《中文》", $title_name, "", "", ""),
+			array("input", "標題《英文》", $title_name_2, "", "", ""),
 			array("input", "連結", $url_name, "", "", ""),
 			array("textarea", "內容", $text_name, "", "1", ""),
 		);

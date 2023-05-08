@@ -7,19 +7,32 @@
             <li>
                 <a class="menu-list" href="javascript:;">
                     <span>關於本部</span>
+                    <span>ABOUT US</span>
                 </a>
                 <ul>
                     <li>
-                        <a href="javascript:;">本部沿革</a>
+                        <a href="javascript:;">
+                            <span>本部沿革</span>
+                            <span>History</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="javascript:;">歷任長官</a>
+                        <a href="javascript:;">
+                            <span>歷任長官</span>
+                            <span>officers</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="javascript:;">忠信精神</a>
+                        <a href="javascript:;">
+                            <span>忠信精神</span>
+                            <span>Faithful spirit</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="javascript:;">部隊隊歌</a>
+                        <a href="javascript:;">
+                            <span>部隊隊歌</span>
+                            <span>troop song</span>
+                        </a>
                     </li>
                 </ul>
             </li>

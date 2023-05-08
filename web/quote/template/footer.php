@@ -8,7 +8,10 @@
             <ul>
                 <?php foreach ($about_title as $k => $v) { ?>
                     <li>
-                        <a href="ediPage.php?id=<?php echo $k; ?>"><?php echo $v["a_title"]; ?></a>
+                        <a href="ediPage.php?id=<?php echo $k; ?>">
+                            <span><?php echo $v["a_title"]; ?></span>
+                            <span><?php echo $v["a_title_2"]; ?></span>
+                        </a>
                     </li>
                 <?php } ?>
             </ul>
@@ -18,8 +21,9 @@
             <ul>
                 <?php foreach ($article_data as $k => $v) { ?>
                     <li>
-                        <a href="./?active=<?php echo $k-1 ?>">
-                            <?php echo $v["a_title"]; ?>
+                        <a href="./?active=<?php echo $k - 1 ?>">
+                            <span><?php echo $v["a_title"]; ?></span>
+                            <span><?php echo $v["a_title_2"]; ?></span>
                         </a>
                     </li>
                 <?php } ?>
@@ -30,35 +34,44 @@
             <ul>
                 <?php foreach ($depart_title as $k => $v) { ?>
                     <li>
-                        <a href="departments.php?id=<?php echo $k; ?>"><?php echo $v["dc_title"]; ?></a>
+                        <a href="departments.php?id=<?php echo $k; ?>">
+                            <span><?php echo $v["dc_title"]; ?></span>
+                            <span><?php echo $v["dc_title_2"]; ?></span>
+                        </a>
                     </li>
                 <?php } ?>
             </ul>
         </li>
-        <?php if(!empty($_SESSION["front_account"])){ ?>
-        <li class="logInShow">
-            <span>系統連結</span>
-            <ul>
-                <li>
-                    <a href="regulation.php">行政規則</a>
-                </li>
-                <li>
-                    <a href="policy.php">一令到位</a>
-                </li>
-                <?php foreach ($sys_link_title as $k => $v) { ?>
+        <?php if (!empty($_SESSION["front_account"])) { ?>
+            <li class="logInShow">
+                <span>系統連結</span>
+                <ul>
                     <li>
-                        <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
+                        <a href="regulation.php">行政規則</a>
                     </li>
-                <?php } ?>
-            </ul>
-        </li>
+                    <li>
+                        <a href="policy.php">一令到位</a>
+                    </li>
+                    <?php foreach ($sys_link_title as $k => $v) { ?>
+                        <li>
+                            <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' . $k . '"'; ?>>
+                                <span><?php echo $v["l_title"]; ?></span>
+                                <span><?php echo $v["l_title_2"]; ?></span>
+                            </a>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </li>
         <?php } ?>
         <li>
             <span>好站連結</span>
             <ul>
                 <?php foreach ($link_title as $k => $v) { ?>
                     <li>
-                        <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_link.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
+                        <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_link.php?id=' . $k . '"'; ?>>
+                            <span><?php echo $v["l_title"]; ?></span>
+                            <span><?php echo $v["l_title_2"]; ?></span>
+                        </a>
                     </li>
                 <?php } ?>
             </ul>

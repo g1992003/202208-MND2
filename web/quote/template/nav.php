@@ -2,7 +2,7 @@
 require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIRECTORY_SEPARATOR . 'system' . DIRECTORY_SEPARATOR . 'ready.mak';
 ?>
 <style>
-    .login-form{
+    .login-form {
         min-width: 300px;
         width: auto;
         padding: 10px;
@@ -23,7 +23,7 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
         color: #fff;
     }
 
-    .login-form input{
+    .login-form input {
         color: #333;
         height: 30px;
         line-height: 28px;
@@ -40,11 +40,11 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
         transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     }
 
-    .login-form .control{
+    .login-form .control {
         text-align: center;
     }
 
-    .login-form button{
+    .login-form button {
         border-radius: 3px;
         font-size: 16px;
         padding: 4px 20px;
@@ -62,11 +62,12 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
         text-decoration: none;
     }
 
-    .form-group{
+    .form-group {
         margin-bottom: 15px;
     }
 
-    .logIn .menu>li:nth-child(4), .logIn .footer>li:nth-child(4){
+    .logIn .menu>li:nth-child(4),
+    .logIn .footer>li:nth-child(4) {
         display: block;
     }
 </style>
@@ -81,11 +82,15 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
                 <li>
                     <div class="menu-list">
                         <span>關於本部</span>
+                        <span>ABOUT US</span>
                     </div>
                     <ul>
                         <?php foreach ($about_title as $k => $v) { ?>
                             <li>
-                                <a href="ediPage.php?id=<?php echo $k; ?>"><?php echo $v["a_title"]; ?></a>
+                                <a href="ediPage.php?id=<?php echo $k; ?>">
+                                    <span><?php echo $v["a_title"]; ?></span>
+                                    <span><?php echo $v["a_title_2"]; ?></span>
+                                </a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -93,12 +98,14 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
                 <li class="units">
                     <div class="menu-list">
                         <span>直屬單位</span>
+                        <span>UNITS</span>
                     </div>
                     <ul>
                         <?php foreach ($article_data as $k => $v) { ?>
                             <li>
-                                <a href="./?active=<?php echo $k-1 ?>">
-                                    <?php echo $v["a_title"]; ?>
+                                <a href="./?active=<?php echo $k - 1 ?>">
+                                    <span><?php echo $v["a_title"]; ?></span>
+                                    <span><?php echo $v["a_title_2"]; ?></span>
                                 </a>
                             </li>
                         <?php } ?>
@@ -107,43 +114,61 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
                 <li>
                     <div class="menu-list">
                         <span>處室介紹</span>
+                        <span>DEPARTMENTS</span>
                     </div>
                     <ul>
                         <?php foreach ($depart_title as $k => $v) { ?>
                             <li>
-                                <a href="departments.php?id=<?php echo $k; ?>"><?php echo $v["dc_title"]; ?></a>
+                                <a href="departments.php?id=<?php echo $k; ?>">
+                                    <span><?php echo $v["dc_title"]; ?></span>
+                                    <span><?php echo $v["dc_title_2"]; ?></span>
+                                </a>
                             </li>
                         <?php } ?>
                     </ul>
                 </li>
-                <?php if(!empty($_SESSION["front_account"])){ ?>
-                <li class="logInShow">
-                    <div class="menu-list">
-                        <span>系統連結</span>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="regulation.php">行政規則</a>
-                        </li>
-                        <li>
-                            <a href="policy.php">一令到位</a>
-                        </li>
-                        <?php foreach ($sys_link_title as $k => $v) { ?>
+                <?php if (!empty($_SESSION["front_account"])) { ?>
+                    <li class="logInShow">
+                        <div class="menu-list">
+                            <span>系統連結</span>
+                            <span>SYSTEMS</span>
+                        </div>
+                        <ul>
                             <li>
-                                <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
+                                <a href="regulation.php">
+                                    <span>行政規則</span>
+                                    <span>REGULATION</span>
+                                </a>
                             </li>
-                        <?php } ?>
-                    </ul>
-                </li>
+                            <li>
+                                <a href="policy.php">
+                                    <span>一令到位</span>
+                                    <span>ORDERS</span>
+                                </a>
+                            </li>
+                            <?php foreach ($sys_link_title as $k => $v) { ?>
+                                <li>
+                                    <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' . $k . '"'; ?>>
+                                        <span><?php echo $v["l_title"]; ?></span>
+                                        <span><?php echo $v["l_title_2"]; ?></span>
+                                    </a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </li>
                 <?php } ?>
                 <li>
                     <div class="menu-list">
                         <span>好站連結</span>
+                        <span>LINKS</span>
                     </div>
                     <ul>
                         <?php foreach ($link_title as $k => $v) { ?>
                             <li>
-                                <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_link.php?id=' . $k . '"'; ?>> <?php echo $v["l_title"]; ?></a>
+                                <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_link.php?id=' . $k . '"'; ?>>
+                                    <span><?php echo $v["l_title"]; ?></span>
+                                    <span><?php echo $v["l_title_2"]; ?></span>
+                                </a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -154,7 +179,7 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
             <li>
                 <a href="javascript:;" class="logBox">
                     <div class="icon"></div>
-                    <?=empty($_SESSION["front_account"]) ? '<p class="log">登入</p>' : '<p class="logout">登出</p>'?>
+                    <?= empty($_SESSION["front_account"]) ? '<p class="log">登入</p>' : '<p class="logout">登出</p>' ?>
                 </a>
 
                 <div class="login-form" style="display: none;">
