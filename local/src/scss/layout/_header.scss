@@ -66,6 +66,7 @@ header{
             a > span:nth-child(2){
                 font-size:16px;
             }
+            .menu-list > span:nth-child(1):after,
             a > span:nth-child(1):after{
                 content: "";
                 display: block;
@@ -113,8 +114,10 @@ header{
             .menu-list{
                 position: relative;
                 font-size: 28px;
+                line-height: 1;
                 font-weight: bold;
                 color: #fff;
+                margin-bottom: 28px;
                 &::after{
                     content: "";
                     position: absolute;

@@ -15,8 +15,10 @@ footer{
             position: relative;
             font-size: 18px;
             font-weight: 500;
-            line-height: 1.66;
+            line-height: 1.2;
             letter-spacing: 1px;
+            margin-bottom: 1em;
+            display: inline-block;
             &::after{
                 content: "";
                 position: absolute;
@@ -54,10 +56,6 @@ footer{
                             width: 100%;
                         }
                     }
-                }
-                a > span:nth-child(1):after{
-                    content: "";
-                    display: block;
                 }
             }
         }
