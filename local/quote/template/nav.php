@@ -9,153 +9,358 @@
                     <span>關於本部</span>
                     <span>ABOUT US</span>
                 </a>
-                <ul>
-                    <li>
-                        <a href="javascript:;">
-                            <span>本部沿革</span>
-                            <span>History</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <span>歷任長官</span>
-                            <span>officers</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <span>忠信精神</span>
-                            <span>Faithful spirit</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <span>部隊隊歌</span>
-                            <span>troop song</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a class="menu-list" href="javascript:;">
-                    <span>長官介紹</span>
-                </a>
-                <ul>
-                    <li>
-                        <a href="javascript:;">指揮官</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">副指揮官</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">參謀長</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">政戰主任</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">政戰副主任</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">副參謀長</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">士官督導長</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a class="menu-list" href="javascript:;">
-                    <span>處室介紹</span>
-                </a>
-                <ul>
-                    <li>
-                        <a href="javascript:;">部本部</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">政戰作戰室</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">督察室</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">人事行政室</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">作訓情報室</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">後勤處</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">資訊通信處</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">網戰整備處</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">電戰整備處</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">主計室</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">醫務所</a>
-                    </li>
-                </ul>
+                <div class="swiper mySwiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>本部沿革</span>
+                                        <span>History</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>歷任長官</span>
+                                        <span>officers</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>忠信精神</span>
+                                        <span>Faithful spirit</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>部隊隊歌</span>
+                                        <span>troop song</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </li>
             <li>
                 <a class="menu-list" href="javascript:;">
                     <span>直屬單位</span>
+                    <span>UNITS</span>
                 </a>
-                <ul>
-                    <li>
-                        <a href="javascript:;">網路戰聯隊</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">資訊通信聯隊</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">電子作戰中心</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">測訓發展中心</a>
-                    </li>
-                </ul>
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>網路戰聯隊 -標題</span>
+                                        <span>CYBER WARFARE TEAM</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>資訊通信聯隊</span>
+                                        <span>INFOCOMM ALLIANCE</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>電子戰中心</span>
+                                        <span>ELECTRONIC WARFARE CENTER</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>訓測中心</span>
+                                        <span>TRAINING CENTER</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>招募專區</span>
+                                        <span>RECRUITMENT</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </li>
+            <li>
+                <a class="menu-list" href="javascript:;">
+                    <span>處室介紹</span>
+                    <span>DEPARTMENTS</span>
+                </a>
+                <div class="swiper mySwiper3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>部本部</span>
+                                        <span>TEST</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>政戰作戰室</span>
+                                        <span>POLITICAL WAR ROOM</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>指揮室</span>
+                                        <span>COMMAND ROOM</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>人事行政室</span>
+                                        <span>PERSONNEL ADMINISTRATION OFFICE</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>人事行政室</span>
+                                        <span>PERSONNEL ADMINISTRATION OFFICE</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>人事行政室</span>
+                                        <span>PERSONNEL ADMINISTRATION OFFICE</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>人事行政室</span>
+                                        <span>PERSONNEL ADMINISTRATION OFFICE</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>人事行政室</span>
+                                        <span>PERSONNEL ADMINISTRATION OFFICE</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>人事行政室</span>
+                                        <span>PERSONNEL ADMINISTRATION OFFICE</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>人事行政室</span>
+                                        <span>PERSONNEL ADMINISTRATION OFFICE</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>人事行政室</span>
+                                        <span>PERSONNEL ADMINISTRATION OFFICE</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </li>
+            <li>
+                <a class="menu-list" href="javascript:;">
+                    <span>長官介紹</span>
+                    <span>test</span>
+                </a>
+                <div class="swiper mySwiper4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>長官介紹</span>
+                                        <span>test</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>長官介紹</span>
+                                        <span>test</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>長官介紹</span>
+                                        <span>test</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>長官介紹</span>
+                                        <span>test</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>長官介紹</span>
+                                        <span>test</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>長官介紹</span>
+                                        <span>test</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>長官介紹</span>
+                                        <span>test</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </li>
             <li>
                 <a class="menu-list" href="javascript:;">
                     <span>好站連結</span>
+                    <span>LINKS</span>
                 </a>
-                <ul>
-                    <li>
-                        <a href="javascript:;">正戰園地</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">學習園地</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">行政專區</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">國防部</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">參謀本部</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">陸軍</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">海軍</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">空軍</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">其它</a>
-                    </li>
-                </ul>
+                <div class="swiper mySwiper5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span>系統連結</span>
+                                        <span>SYSTEM LINKS</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </li>
         </ul>
     </nav>

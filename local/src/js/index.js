@@ -93,6 +93,41 @@ $(function () {
             prevEl: ".swiper-button-prev",
         },
     });
+    var swiper1 = new Swiper(".mySwiper1", {
+      spaceBetween: '36%',
+      navigation: {
+        nextEl: ".mySwiper1 .swiper-button-next",
+        prevEl: ".mySwiper1 .swiper-button-prev",
+      },
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: '36%',
+      navigation: {
+        nextEl: ".mySwiper2 .swiper-button-next",
+        prevEl: ".mySwiper2 .swiper-button-prev",
+      },
+    });
+    var swiper3 = new Swiper(".mySwiper3", {
+      spaceBetween: '36%',
+      navigation: {
+        nextEl: ".mySwiper3 .swiper-button-next",
+        prevEl: ".mySwiper3 .swiper-button-prev",
+      },
+    });
+    var swiper4 = new Swiper(".mySwiper4", {
+      spaceBetween: '36%',
+      navigation: {
+        nextEl: ".mySwiper4 .swiper-button-next",
+        prevEl: ".mySwiper4 .swiper-button-prev",
+      },
+    });
+    var swiper5 = new Swiper(".mySwiper5", {
+      spaceBetween: '36%',
+      navigation: {
+        nextEl: ".mySwiper5 .swiper-button-next",
+        prevEl: ".mySwiper5 .swiper-button-prev",
+      },
+    });
 
     $('.swiper-slide').on('mouseenter', function () {
         swiper.autoplay.stop();
