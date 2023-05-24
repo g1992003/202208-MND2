@@ -39,30 +39,30 @@
                 <?php } ?>
             </ul>
         </li>
-        <?php if (!empty($_SESSION["front_account"])) { ?>
-            <li class="logInShow">
-                <span>系統連結<br>SYSTEM</span>
-                <ul>
+        <?php /*if (!empty($_SESSION["front_account"])) {*/ ?>
+        <li class="logInShow">
+            <span>系統連結<br>SYSTEM</span>
+            <ul>
+                <li>
+                    <a href="regulation.php">
+                        行政規則<br>REGULATION
+                    </a>
+                </li>
+                <li>
+                    <a href="policy.php">
+                        一令到位<br>ORDERS
+                    </a>
+                </li>
+                <?php foreach ($sys_link_title as $k => $v) { ?>
                     <li>
-                        <a href="regulation.php">
-                            行政規則<br>REGULATION
+                        <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' .  $v["l_id"] . '"'; ?>>
+                            <?php echo $v["l_title"] . "<br>" . $v["l_title_2"]; ?>
                         </a>
                     </li>
-                    <li>
-                        <a href="policy.php">
-                            一令到位<br>ORDERS
-                        </a>
-                    </li>
-                    <?php foreach ($sys_link_title as $k => $v) { ?>
-                        <li>
-                            <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' . $k . '"'; ?>>
-                                <?php echo $v["l_title"] . "<br>" . $v["l_title_2"]; ?>
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </li>
-        <?php } ?>
+                <?php } ?>
+            </ul>
+        </li>
+        <?php /*}*/ ?>
         <li>
             <span>好站連結<br>LINKS</span>
             <ul>
