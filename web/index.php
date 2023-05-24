@@ -21,7 +21,7 @@ include "quote/template/head.php";
 <link rel="stylesheet" href="dist/css/index.css" />
 </head>
 
-<body class="lang_tw <?=empty($_SESSION["front_account"]) ? 'logIn' : 'logOut'?>">
+<body class="lang_tw <?= empty($_SESSION["front_account"]) ? 'logIn' : 'logOut' ?>">
     <?php
     include "quote/template/nav.php";
     ?>
@@ -137,7 +137,6 @@ include "quote/template/head.php";
     <?php include "quote/template/footer.php"; ?>
     <script src="dist/js/function.js"></script>
     <script src="dist/js/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script>
         render(0, <?php echo reset($depart_data)["dc_id"]; ?>);
 
