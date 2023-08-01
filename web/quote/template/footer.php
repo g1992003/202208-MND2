@@ -55,7 +55,7 @@
                 </li>
                 <?php foreach ($sys_link_title as $k => $v) { ?>
                     <li>
-                        <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' .  $v["l_id"] . '"'; ?>>
+                        <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_system.php?id=' . $v["l_id"] . '"'; ?>>
                             <?php echo $v["l_title"] . "<br>" . $v["l_title_2"]; ?>
                         </a>
                     </li>
@@ -70,6 +70,7 @@
                     <li>
                         <a <?php echo ($v["l_type"] == 1) ? 'href="' . $v["l_url"] . '" target="_blank" rel="nofollow"' : 'href="edi_link.php?id=' . $k . '"'; ?>>
                             <?php echo $v["l_title"] . "<br>" . $v["l_title_2"]; ?>
+                        </a>
                     </li>
                 <?php } ?>
             </ul>

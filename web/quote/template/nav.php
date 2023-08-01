@@ -98,8 +98,8 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'dominator' . DIR
                                             </li>
                                         <?php } ?>
                                     </ul>
-                                <?php } ?>
                                 </div>
+                            <?php } ?>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>

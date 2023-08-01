@@ -16,11 +16,15 @@ function db_conn($project_name)
 
 	//連結資料庫後告知編碼
 	try {
-		$link = new PDO("sqlsrv:server=192.168.0.196; encrypt=true; TrustServerCertificate=true; Database = $database", $user, $password);
+		$link = new PDO("sqlsrv:server=192.168.0.169; encrypt=true; TrustServerCertificate=true; Database = $database", $user, $password);
 		$link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$link->setAttribute(PDO::SQLSRV_ATTR_QUERY_TIMEOUT, 1);
 	} catch (PDOException $e) {
+		$msg =  $e->getMessage();
+		$error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
+		error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
 		header('Location:errorDB.html');
+		$link = null;
 		exit();
 	}
 
