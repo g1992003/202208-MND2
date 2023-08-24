@@ -3,19 +3,29 @@ session_start();
 include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
-//主視覺
-$query = "SELECT * FROM document WHERE d_id IN (26,27)";
-$banner = sql_data($query, $link, 2, "d_id");
+try {
+    //主視覺
+    $query = "SELECT * FROM document WHERE d_id IN (26,27)";
+    $banner = sql_data($query, $link, 2, "d_id");
 
-//處室
-$query = "SELECT d_class.dc_id,dc_title FROM d_class INNER JOIN news ON d_class.dc_id = news.dc_id WHERE n_status = 1 AND n_page = 1 ORDER BY dc_order";
-$depart_data = sql_data($query, $link, 2, "dc_id");
+    //處室
+    $query = "SELECT d_class.dc_id,dc_title FROM d_class INNER JOIN news ON d_class.dc_id = news.dc_id WHERE n_status = 1 AND n_page = 1 ORDER BY dc_order";
+    $depart_data = sql_data($query, $link, 2, "dc_id");
 
-//忠信報
-$query = "SELECT * FROM image ORDER BY i_order";
-$img_data = sql_data($query, $link);
+    //忠信報
+    $query = "SELECT * FROM image ORDER BY i_order";
+    $img_data = sql_data($query, $link);
+} catch (Exception $e) {
+    $msg =  $e->getMessage();
+    $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
+    $error_text = $error_text . $e->getTraceAsString() . "\n";
+    error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
+    $link = null;
+    header('Location:errorDB.html');
+} finally {
+    $link = null;
+}
 
-$link = null;
 include "quote/template/head.php";
 ?>
 <link rel="stylesheet" href="dist/css/index.css" />

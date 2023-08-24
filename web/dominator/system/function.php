@@ -22,9 +22,10 @@ function db_conn($project_name)
 	} catch (PDOException $e) {
 		$msg =  $e->getMessage();
 		$error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
+		$error_text = $error_text . $e->getTraceAsString() . "\n";
 		error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
-		header('Location:errorDB.html');
 		$link = null;
+		header('Location:errorDB.html');
 		exit();
 	}
 

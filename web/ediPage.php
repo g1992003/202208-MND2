@@ -8,9 +8,20 @@ $id = html_decode($id);
 $id = preg_replace("/[^0-9 ]/", "", $id);
 $id = ($id == "") ?  $first_arr["a_id"] : $id;
 
-//關於本部
-$query = "SELECT * FROM about WHERE a_id = $id";
-$data = sql_data($query, $link, 1);
+try {
+    //關於本部
+    $query = "SELECT * FROM about WHERE a_id = $id";
+    $data = sql_data($query, $link, 1);
+} catch (Exception $e) {
+    $msg =  $e->getMessage();
+    $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
+    $error_text = $error_text . $e->getTraceAsString() . "\n";
+    error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
+    $link = null;
+    header('Location:errorDB.html');
+} finally {
+    $link = null;
+}
 
 if (!$data) {
     to_exit:
@@ -21,7 +32,6 @@ if (!$data) {
 $data["a_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["a_status"]);
 if ($data["a_status"] == 0 && $id_account == "") goto to_exit;
 
-$link = null;
 $title_var = $data["a_title"] . " | " . $title_var;
 
 include "quote/template/head.php";

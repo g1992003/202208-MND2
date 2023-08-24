@@ -2,23 +2,36 @@
 include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
-$id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
-$id = html_decode($id);
-$id = preg_replace("/[^0-9 ]/", "", $id);
-$id = ($id == "") ?  $first_depart["dc_id"] : $id;
 
-//處室介紹
-$where = ($id_account != "") ? "dc_id = $id" : "d_status = 1 AND dc_id = $id";
-$query = "SELECT * FROM depart WHERE $where ORDER BY d_order";
-$data = sql_data($query, $link, 2, "d_id");
+try {
 
-if (!$data && !isset($depart_title[$id])) {
-    include("error404.html");
-    exit();
-}
-if ($data) {
-    $first_data = reset($data);
-    $no = (!isset($no) || !is_numeric($id)) ? $first_data["d_id"] : $no;
+    $id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
+    $id = html_decode($id);
+    $id = preg_replace("/[^0-9 ]/", "", $id);
+    $id = ($id == "") ?  $first_depart["dc_id"] : $id;
+
+    //處室介紹
+    $where = ($id_account != "") ? "dc_id = $id" : "d_status = 1 AND dc_id = $id";
+    $query = "SELECT * FROM depart WHERE $where ORDER BY d_order";
+    $data = sql_data($query, $link, 2, "d_id");
+
+    if (!$data && !isset($depart_title[$id])) {
+        include("error404.html");
+        exit();
+    }
+    if ($data) {
+        $first_data = reset($data);
+        $no = (!isset($no) || !is_numeric($id)) ? $first_data["d_id"] : $no;
+    }
+} catch (Exception $e) {
+    $msg =  $e->getMessage();
+    $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
+    $error_text = $error_text . $e->getTraceAsString() . "\n";
+    error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
+    $link = null;
+    header('Location:errorDB.html');
+} finally {
+    $link = null;
 }
 
 $link = null;

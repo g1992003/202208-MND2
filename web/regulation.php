@@ -11,29 +11,39 @@ $check = 10; //分頁數量
 $page_set = "?id=" . $id . "&p="; //頁碼
 $where = "WHERE n_status = 1 AND n_page = 2 AND dc_id = $id";
 
-//分頁設定開始
-$query = "SELECT COUNT(n_id) FROM news $where";
-if (!isset($p) || !is_numeric($p) || $p < 1) $p = 1;
-$result = $link->prepare($query);
-$result->execute();
-$r = $result->fetchColumn();
-$total = $r;
-$maxPage = $total > 0 ? ceil($total / $check) : 1;
-$p = $p > $maxPage ? 1 : $p;
-$start = ($p - 1) * $check;
+try {
+    //分頁設定開始
+    $query = "SELECT COUNT(n_id) FROM news $where";
+    if (!isset($p) || !is_numeric($p) || $p < 1) $p = 1;
+    $result = $link->prepare($query);
+    $result->execute();
+    $r = $result->fetchColumn();
+    $total = $r;
+    $maxPage = $total > 0 ? ceil($total / $check) : 1;
+    $p = $p > $maxPage ? 1 : $p;
+    $start = ($p - 1) * $check;
 
-$end_page = $p + 2 <= $maxPage ? $p + 2 : $maxPage;
-$start_page = $end_page - 4 >= 1 ? $end_page - 4 : 1;
-if ($end_page - $start_page < 4) $end_page = $start_page + 4 <= $maxPage ? $start_page + 4 : $maxPage;
+    $end_page = $p + 2 <= $maxPage ? $p + 2 : $maxPage;
+    $start_page = $end_page - 4 >= 1 ? $end_page - 4 : 1;
+    if ($end_page - $start_page < 4) $end_page = $start_page + 4 <= $maxPage ? $start_page + 4 : $maxPage;
 
-//一令到位
-$query = "SELECT n_id,n_title,n_name,n_unit,n_tag,n_file,n_no,
+    //一令到位
+    $query = "SELECT n_id,n_title,n_name,n_unit,n_tag,n_file,n_no,
             convert(varchar(4), n_date, 111) AS n_year,
             convert(varchar(5), n_date, 101) AS n_date
         FROM news $where ORDER BY n_order ";
-$data = sql_data($query, $link, 2, "n_id");
+    $data = sql_data($query, $link, 2, "n_id");
+} catch (Exception $e) {
+    $msg =  $e->getMessage();
+    $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
+    $error_text = $error_text . $e->getTraceAsString() . "\n";
+    error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
+    $link = null;
+    header('Location:errorDB.html');
+} finally {
+    $link = null;
+}
 
-$link = null;
 $title_var =  "行政規則 | " . $depart_title[$id]["dc_title"] . " | " . $title_var;
 
 include "quote/template/head.php";

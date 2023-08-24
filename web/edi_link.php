@@ -8,15 +8,24 @@ if (!isset($id) || !is_numeric($id)) {
     exit();
 }
 
-//好站連結
-$query = "SELECT * FROM link WHERE l_id = $id";
-$data = sql_data($query, $link, 1);
-if (!$data) goto to_exit;
+try {
+    //好站連結
+    $query = "SELECT * FROM link WHERE l_id = $id";
+    $data = sql_data($query, $link, 1);
+    if (!$data) goto to_exit;
 
-$data["l_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["l_status"]);
-if ($data["l_status"] == 0 && $id_account == "") goto to_exit;
-
-$link = null;
+    $data["l_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["l_status"]);
+    if ($data["l_status"] == 0 && $id_account == "") goto to_exit;
+} catch (Exception $e) {
+    $msg =  $e->getMessage();
+    $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
+    $error_text = $error_text . $e->getTraceAsString() . "\n";
+    error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
+    $link = null;
+    header('Location:errorDB.html');
+} finally {
+    $link = null;
+}
 $title_var = $data["l_title"] . " | " . $title_var;
 
 include "quote/template/head.php";
