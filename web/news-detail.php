@@ -8,17 +8,27 @@ if (!isset($id) || !is_numeric($id)) {
     exit();
 }
 
-//內容
-$query = "SELECT n_id,n_page,n_status,n_title,n_text,n_file,n_tag,n_unit,n_name,
+try {
+    //內容
+    $query = "SELECT n_id,n_page,n_status,n_title,n_text,n_file,n_tag,n_unit,n_name,
             convert(varchar, n_date, 111) AS n_date
         FROM news WHERE n_id = $id";
-$data = sql_data($query, $link, 1);
-if (!$data) goto to_exit;
+    $data = sql_data($query, $link, 1);
+    if (!$data) goto to_exit;
 
-$data["n_status"] = preg_replace("/[^0-9 ]/", "", $data["n_status"]);
-if ($data["n_status"] == 0  && $id_account == "")  goto to_exit;
+    $data["n_status"] = preg_replace("/[^0-9 ]/", "", $data["n_status"]);
+    if ($data["n_status"] == 0  && $id_account == "")  goto to_exit;
+} catch (PDOException $e) {
+    $msg =  $e->getMessage();
+    $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
+    $error_text = $error_text . $e->getTraceAsString() . "\n";
+    error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
+    $link = null;
+    header('Location:index.php');
+} finally {
+    $link = null;
+}
 
-$link = null;
 $title_var =  "最新消息 | " . $data["n_title"] . " | " . $title_var;
 
 include "quote/template/head.php";

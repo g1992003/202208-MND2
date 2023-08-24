@@ -33,13 +33,18 @@ try {
             convert(varchar(5), n_date, 101) AS n_date
         FROM news $where ORDER BY n_order ";
     $data = sql_data($query, $link, 2, "n_id");
-} catch (Exception $e) {
+
+    if (!$data && !isset($depart_title[$id])) {
+        include("error404.html");
+        exit();
+    }
+} catch (PDOException $e) {
     $msg =  $e->getMessage();
     $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
     $error_text = $error_text . $e->getTraceAsString() . "\n";
     error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
     $link = null;
-    header('Location:errorDB.html');
+    header('Location:index.php');
 } finally {
     $link = null;
 }

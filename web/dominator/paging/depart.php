@@ -129,7 +129,7 @@ include '../quote/head.php';
 													<?php echo $v[$title_name]; ?>
 												</td>
 												<td style="text-align: center; vertical-align: middle; word-break:break-all;" width="20%">
-													<button data-toggle="dropdown" class="btn btn-xs btn-info dropdown-toggle" style="margin-right:5px;" onclick="window.open('<?php echo $url_set . $_SERVER['HTTP_HOST']; ?>/news-detail.php?id=<?php echo $v[$id_name]; ?>')">查看 </button>
+													<button data-toggle="dropdown" class="btn btn-xs btn-info dropdown-toggle" style="margin-right:5px;" onclick="window.open('<?php echo $url_set . $_SERVER['HTTP_HOST']; ?>/departments.php?id=<?php echo $parents_id; ?>&no=<?php echo $v[$id_name]; ?>')">查看 </button>
 													<select onchange="select_check('<?php echo $v[$id_name]; ?>');" id="check_<?php echo $v[$id_name]; ?>">
 														<?php
 														foreach ($status_data as $k1 => $v1) {

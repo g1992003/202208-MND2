@@ -39,12 +39,11 @@
                 <?php } ?>
             </ul>
         </li>
-        <?php /*if (!empty($_SESSION["front_account"])) {*/ ?>
         <li class="logInShow">
             <span>系統連結<br>SYSTEM</span>
             <ul>
                 <li>
-                    <a href="regulation.php">
+                    <a href=" regulation.php">
                         行政規則<br>REGULATION
                     </a>
                 </li>
@@ -62,7 +61,6 @@
                 <?php } ?>
             </ul>
         </li>
-        <?php /*}*/ ?>
         <li>
             <span>好站連結<br>LINKS</span>
             <ul>

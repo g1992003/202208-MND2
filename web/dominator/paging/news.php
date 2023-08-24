@@ -130,7 +130,9 @@ $page_name = "news.php?p=$p";
 													?>
 												</td>
 												<?php if ($_SESSION["dominator_main"] < 3) {
-													echo '<th style="text-align: center; vertical-align: middle; word-break:break-all;" width="20%">' . html_decode($c_data[$v[$m_id_name]]["dc_title"]) . '</th>';
+													echo '<th style="text-align: center; vertical-align: middle; word-break:break-all;" width="20%">';
+													echo (isset($c_data[$v[$m_id_name]]["dc_title"])) ? html_decode($c_data[$v[$m_id_name]]["dc_title"]) : '';
+													echo '</th>';
 												} ?>
 												<td style="text-align: center; vertical-align: middle; word-break:break-all;" width="30%">
 													<?php echo html_decode($v[$title_name]); ?>

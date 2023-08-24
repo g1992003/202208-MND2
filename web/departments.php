@@ -2,7 +2,6 @@
 include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
-
 try {
 
     $id = (!isset($id)) ?  $first_depart["dc_id"] : $id;
@@ -23,18 +22,17 @@ try {
         $first_data = reset($data);
         $no = (!isset($no) || !is_numeric($id)) ? $first_data["d_id"] : $no;
     }
-} catch (Exception $e) {
+} catch (PDOException $e) {
     $msg =  $e->getMessage();
     $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
     $error_text = $error_text . $e->getTraceAsString() . "\n";
     error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
     $link = null;
-    header('Location:errorDB.html');
+    header('Location:index.php');
 } finally {
     $link = null;
 }
 
-$link = null;
 $title_var =  "處室介紹 | " . $depart_title[$id]["dc_title"] . " | " . $title_var;
 
 include "quote/template/head.php";

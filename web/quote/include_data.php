@@ -1,6 +1,8 @@
-<?php
+﻿<?php
 
 header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
+
+date_default_timezone_set('Asia/Taipei');
 
 $id_account = !isset($_COOKIE["PHPSESSID"]) ? "" : $_COOKIE["PHPSESSID"];
 $id_account = preg_replace("/[^A-Za-z0-9 ]/", "", $id_account);
@@ -42,10 +44,11 @@ try {
     $link_title = sql_data($query, $link, 2, "l_id");
     $link_title_nav = array_chunk($link_title, 10);
 
+
     //直屬單位
     $query = "SELECT * FROM about WHERE a_id IN (1,2,3,4,5)";
     $article_data = sql_data($query, $link);
-} catch (Exception $e) {
+} catch (PDOException $e) {
     $msg =  $e->getMessage();
     $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
     $error_text = $error_text . $e->getTraceAsString() . "\n";

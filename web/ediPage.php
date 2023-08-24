@@ -12,26 +12,25 @@ try {
     //關於本部
     $query = "SELECT * FROM about WHERE a_id = $id";
     $data = sql_data($query, $link, 1);
-} catch (Exception $e) {
+
+    if (!$data) {
+        to_exit:
+        include("error404.html");
+        exit();
+    }
+
+    $data["a_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["a_status"]);
+    if ($data["a_status"] == 0 && $id_account == "") goto to_exit;
+} catch (PDOException $e) {
     $msg =  $e->getMessage();
     $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
     $error_text = $error_text . $e->getTraceAsString() . "\n";
     error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
     $link = null;
-    header('Location:errorDB.html');
+    header('Location:index.php');
 } finally {
     $link = null;
 }
-
-if (!$data) {
-    to_exit:
-    include("error404.html");
-    exit();
-}
-
-$data["a_status"] = preg_replace("/[^A-Za-z0-9 ]/", "", $data["a_status"]);
-if ($data["a_status"] == 0 && $id_account == "") goto to_exit;
-
 $title_var = $data["a_title"] . " | " . $title_var;
 
 include "quote/template/head.php";

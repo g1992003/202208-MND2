@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'dominator/system/ready.mak';
 include 'quote/include_data.php';
 
@@ -15,13 +14,13 @@ try {
     //忠信報
     $query = "SELECT * FROM image ORDER BY i_order";
     $img_data = sql_data($query, $link);
-} catch (Exception $e) {
+} catch (PDOException $e) {
     $msg =  $e->getMessage();
     $error_text = "[" . date("Y/m/d H:i:s") . "] " . $msg . "\n";
     $error_text = $error_text . $e->getTraceAsString() . "\n";
     error_log($error_text, 3, "/xampp/apache/logs/pdo-errors.log");
     $link = null;
-    header('Location:errorDB.html');
+    header('Location:index.php');
 } finally {
     $link = null;
 }
@@ -48,8 +47,8 @@ include "quote/template/head.php";
                 <div class="img">
                     <img src="upload/<?php echo $banner[26]["d_text"]; ?>" alt="banner首頁圖" />
                     <div class="text_box">
-                        <p class="tw">網路安全防護 / 滲透攻擊測試 / 資訊數據偵蒐</p>
-                        <p class="en">OPRATE, DEFEND, ATTACT, INFLUNCE, INFORM</p>
+                        <!-- <p class="tw">網路安全防護 / 滲透攻擊測試 / 資訊數據偵蒐</p>
+                        <p class="en">OPRATE, DEFEND, ATTACT, INFLUNCE, INFORM</p> -->
                         <div href="javascript:;" class="scroll-animate">
                             <div class="arrow_1"><img src="dist/images/1.png" alt=""></div>
                             <div class="arrow_2"><img src="dist/images/1.png" alt=""></div>
@@ -151,7 +150,6 @@ include "quote/template/head.php";
         render(0, <?php echo reset($depart_data)["dc_id"]; ?>);
 
         function render(active, id) {
-            console.log(active)
             const dom = document.querySelector('#list-temp');
             $('.item_menu_list li').removeClass('active');
             $('.item_menu_list li').eq(active).addClass('active');
