@@ -9,6 +9,8 @@ $id_account = preg_replace("/[^A-Za-z0-9 ]/", "", $id_account);
 
 $this_page = $url_set . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
+$_SESSION["front_account"] = 1; // AD登入預設
+
 try {
     //TITLE資訊
     $query = "SELECT d_id,d_text FROM document WHERE d_id IN(1,2,3,4,5,6,7,8,21,22,23,24,25,26,27)";

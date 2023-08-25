@@ -163,7 +163,7 @@
             <li>
                 <a href="javascript:;" class="logBox">
                     <div class="icon"></div>
-                    <p class="log">登入</p>
+                    <p class="log">登出</p>
                 </a>
             </li>
             <li class="hamMenu">
