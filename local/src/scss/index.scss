@@ -113,11 +113,23 @@ section{
             position: absolute;
             top: 187px;
             left: 0;
-            padding: 0.4em 3% 0 9.2%;
+            padding: 0.4em 6% 0 6%;
             font-size: 36px;
             font-weight: 700;
             color: #fff;
             letter-spacing: 1.75px;
+            line-height: 1.5;
+            span{
+                display: block;
+            }
+            span:nth-child(1){
+                font-size: 28px;
+            }
+            span:nth-child(2){
+                font-size: 16px;
+                min-height:3em;
+                margin-top:1em;
+            }
             i:first-child{
                 position: absolute;
                 top: 0;

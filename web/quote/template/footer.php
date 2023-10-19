@@ -44,12 +44,12 @@
             <ul>
                 <li>
                     <a href=" regulation.php">
-                        行政規則<br>REGULATION
+                        行政規則<br>Regulation
                     </a>
                 </li>
                 <li>
                     <a href="policy.php">
-                        一令到位<br>ORDERS
+                        一令到位<br>Orders
                     </a>
                 </li>
                 <?php foreach ($sys_link_title as $k => $v) { ?>

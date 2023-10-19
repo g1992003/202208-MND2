@@ -93,13 +93,13 @@
                                     <li>
                                         <a href="regulation.php">
                                             <span>行政規則</span>
-                                            <span>REGULATION</span>
+                                            <span>Regulation</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="policy.php">
                                             <span>一令到位</span>
-                                            <span>ORDERS</span>
+                                            <span>Orders</span>
                                         </a>
                                     </li>
                                     <?php foreach ($sys_link_title0 as $k => $v) { ?>

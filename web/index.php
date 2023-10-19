@@ -27,7 +27,7 @@ try {
 
 include "quote/template/head.php";
 ?>
-<link rel="stylesheet" href="dist/css/index.css" />
+<link rel="stylesheet" href="dist/css/index.css?202310" />
 </head>
 
 <body class="lang_tw <?= empty($_SESSION["front_account"]) ? 'logIn' : 'logOut' ?>">
@@ -65,7 +65,11 @@ include "quote/template/head.php";
                     <li>
                         <a href="javascript:;">
                             <img src="dist/images/b<?php echo $k; ?>.jpg" alt="" />
-                            <p class="name"><?php echo $v["a_title"]; ?><i></i><i></i></p>
+                            <p class="name">
+                                <span><?php echo $v["a_title"]; ?></span>
+                                <span><?php echo $v["a_title_2"]; ?></span>
+                                <i></i><i></i>
+                            </p>
                         </a>
                         <div class="editor_Content">
                             <div class="editor_box">
